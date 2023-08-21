@@ -1,0 +1,27 @@
+.file-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file-label {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-label:hover {
+    background-color: #45a049;
+}
+
+.file-input {
+    display: none;
+}
+#careers {
+    display: inline;
+
+    /* Additional styling properties as needed */
+}
