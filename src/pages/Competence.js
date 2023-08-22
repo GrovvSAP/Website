@@ -106,16 +106,31 @@ const Contact = () => {
                             <div className="m-2 text-justify text-sm">
                                 <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP DMC</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our Business Management System is a robust and easily scalable system that streamlines business operations, increase efficiency, and ultimately drive growth and profitability for your business.
-                                    With features such as employee management, finance control, and many more modules to effectively manage all aspects of a business.
-                                    All data is stored in the cloud and as such it is easily accessible from all devices and from any location.
+                                  
+SAP DMC, or Data Management Console, is a vital SAP component for streamlined data governance. It centralizes data quality monitoring, integration, and lifecycle management, enhancing consistency and informed decision-making. This tool empowers businesses to optimize data assets, ensuring integrity and compliance while driving operational efficiency.
                                 </p>
                                 <div className="flex justify-center my-4">
-                                    <Link to="/get-demo" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                                    </Link>
-                                </div>
+      <a
+        href="https://www.sap.com/products/scm/digital-manufacturing-cloud.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+      >
+        Read More 
+        <svg
+          className="w-4 h-4 ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+      </a>
+    </div>
                             </div>
                         </div>
 
@@ -123,17 +138,30 @@ const Contact = () => {
                             <div className="m-2 text-justify text-sm">
                                 <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP ME</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our all encompassing School Management Portal is the only solution needed for any institution.
-                                    The School Management Portal (SMP) is a tool that can help educational institutions of all kinds manage their administrative tasks, automate processes, and streamline communication between teachers, students, parents, and administrators. 
-                                    The software can be used to manage all aspects of school operations, including student enrollment, attendance, grades, schedules, and more.
+                                SAP ME (Manufacturing Execution) serves as a crucial link between shop floor operations and business systems. By enabling real-time data exchange and process synchronization, it enhances production efficiency, quality, and agility, ultimately leading to more informed decision-making and streamlined manufacturing workflows.
                                 </p>
                                 <div className="flex justify-center my-4">
-                                    <Link to="/get-demo" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                                    </Link>
-                                </div>
-                                
+      <a
+        href="https://www.systema.com/portfolio/sap-manufacturing/sap-me"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+      >
+        Read More 
+        <svg
+          className="w-4 h-4 ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+      </a>
+    </div>
                                 {/* <ul className="border-t border-gray-300 py-8 space-y-6">
                                     <li className="flex items-center space-x-2 px-8">
                                         <span className="bg-green-600 rounded-full p-1">
@@ -151,15 +179,32 @@ const Contact = () => {
                             <div className="m-2 text-justify text-sm">
                             <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP MII</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    The Payroll Management System automates the process of employee payments for businesses and organizations of different sizes. It helps to ensure that your employees get paid accurately and on time, while also reducing the time and effort required to manage payroll manually, with this system in place, you enjoy benefits such as: 
-                                    increased accuracy in employee payments. It can also integrate into an existing management system through well-structured APIs.
+                                    
+SAP MII, or Manufacturing Integration and Intelligence, is a key SAP solution for manufacturing processes. It integrates shop floor data with business systems, enabling real-time visibility and control. This tool empowers businesses to optimize production, enhance efficiency, and make informed decisions by leveraging actionable insights from manufacturing data. SAP MII bridges the gap between the shop floor and the business, facilitating streamlined operations and improved collaboration.
+                           
                                 </p>
                                 <div className="flex justify-center my-4">
-                                    <Link to="/get-demo" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                                    </Link>
-                                </div>
+      <a
+        href="https://www.sap.com/products/scm/manufacturing-intelligence-integration.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+      >
+        Read More 
+        <svg
+          className="w-4 h-4 ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+      </a>
+    </div>
                             </div>
                         </div>
 
@@ -167,15 +212,31 @@ const Contact = () => {
                             <div className="m-2 text-justify text-sm">
                                 <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP Fiori</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our event management system helps to manage different types of events, whether weddings, burials or any kind of event. With an easily customizable menu, you get to define your user experience and make your event fully customizable and memorable.
-                                    With use cases already recorded for quite a number of events, we can assure you of a stress-less event mangement platform.
+                               
+SAP Fiori is a user experience (UX) design approach and a collection of applications that provide a consistent and intuitive interface across SAP software. It focuses on delivering a modern, responsive, and user-centric experience for various business processes. By simplifying and harmonizing the user interaction with SAP applications, Fiori enhances usability, productivity, and user satisfaction. The Fiori design principles are applied to a wide range of applications, spanning from analytics and workflows to transactional tasks, creating a unified and visually appealing experience for users interacting with SAP systems.
                                 </p>
                                 <div className="flex justify-center my-4">
-                                    <Link to="/get-demo" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                                    </Link>
-                                </div>
+      <a
+        href="https://www.sap.com/products/technology-platform/fiori.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+      >
+        Read More 
+        <svg
+          className="w-4 h-4 ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+      </a>
+    </div>
                             </div>
                         </div>     
 
@@ -183,41 +244,63 @@ const Contact = () => {
                             <div className="m-2 text-justify text-sm">
                                 <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Custom complex developments</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our event management system helps to manage different types of events, whether weddings, burials or any kind of event. With an easily customizable menu, you get to define your user experience and make your event fully customizable and memorable.
-                                    With use cases already recorded for quite a number of events, we can assure you of a stress-less event mangement platform.
+                                Elevate your software needs with our "Custom Complex Developments" service. From specialized applications to seamless system integration, our experienced team creates tailored solutions that tackle intricate challenges. We collaborate closely, ensuring every stage aligns with your vision. Get ready to innovate, streamline, and stand out in the digital realm.
                                 </p>
                                 <div className="flex justify-center my-4">
-                                    <Link to="/get-demo" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                                    </Link>
-                                </div>
+      <a
+        href="https://www.systema.com/portfolio/sap-manufacturing/sap-me"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+      >
+        Read More 
+        <svg
+          className="w-4 h-4 ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+      </a>
+    </div>
                             </div>
                         </div>     
 
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP PICO</h4>
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP PCO</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our event management system helps to manage different types of events, whether weddings, burials or any kind of event. With an easily customizable menu, you get to define your user experience and make your event fully customizable and memorable.
-                                    With use cases already recorded for quite a number of events, we can assure you of a stress-less event mangement platform.
+                                SAP PCo (Plant Connectivity) serves as a vital integration solution, enabling real-time data exchange between shop floor equipment and manufacturing systems. By collecting and transmitting data from diverse sources, it enhances process visibility and efficiency, supporting informed decision-making and operational optimization.
                                 </p>
                                 <div className="flex justify-center my-4">
-                                    <Link to="/get-demo" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                                    </Link>
-                                </div>
+      <a
+        href="https://www.systema.com/portfolio/sap-manufacturing/sap-pco"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+      >
+        Read More 
+        <svg
+          className="w-4 h-4 ml-1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+      </a>
+    </div>
                             </div>
                         </div>     
-
-
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
