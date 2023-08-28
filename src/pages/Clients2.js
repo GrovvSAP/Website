@@ -33,7 +33,8 @@ const Clients = () => {
                         <div className='flex justify-center'>
                             <div className='w-24 border-b-4 border-green-900'></div>
                         </div>
-                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-green-900">Some of our clients.</h2>
+                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-green-900">Renowned clients place their trust in Grovv due to our unwavering excellence and reliability</h2>
+                        
                     </div>
 
                 <div className="p-16" data-aos="fade-in" data-aos-delay="600">

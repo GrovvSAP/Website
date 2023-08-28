@@ -60,6 +60,7 @@ function App() {
 
 
             <Route path="/jobPosition" element={<JobDescription />} /> 
+            <Route path="/yaniv" element={<AboutGrovv />} /> 
 
 
 
