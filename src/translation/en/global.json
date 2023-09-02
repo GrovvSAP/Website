@@ -1,0 +1,21 @@
+{
+    
+
+    "header" :{
+         "message":"About Grovv",
+         "About":"About Grovv",
+         "Services":"Services",
+         "Competence":"Competence-Portfolio",
+         "Partners": "Partners",
+         "Costumers":"Costumers",
+         "Contact": "Contact Us",
+         "Careers": "Careers",
+        
+         "Next":"פתרונות תוכנה בהתאמה אישית לצרכי העסק הייחודיים שלך" 
+    
+    },
+
+    "home":{
+        "body":"A store designed for all your pets needs"
+    }
+}

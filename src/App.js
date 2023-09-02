@@ -57,12 +57,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/roman" element={<Roman />} /> 
 
-
-
             <Route path="/jobPosition" element={<JobDescription />} /> 
             <Route path="/yaniv" element={<AboutGrovv />} /> 
-
-
 
           </Routes>
         </ScrollToTop>

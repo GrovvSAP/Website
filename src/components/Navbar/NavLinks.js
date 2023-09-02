@@ -1,44 +1,91 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import img from '../../images/logotrasnparent.png'; 
+ // language toggle button////
+import { useTranslation } from 'react-i18next';
+
+
+
+
+
 const NavLinks = () => {
+    const [isRTL, setIsRTL] = useState(false);
+    const [t, i18n] = useTranslation("global");
+  
+    useEffect(() => {
+      const body = document.body;
+      if (isRTL) {
+        body.classList.remove('dir-ltr');
+        body.classList.add('dir-rtl');
+      } else {
+        body.classList.remove('dir-rtl');
+        body.classList.add('dir-ltr');
+      }
+    }, [isRTL]);
+  
+    const handleToggle = () => {
+      setIsRTL(prevIsRTL => !prevIsRTL);
+      const lang = isRTL ? 'en' : 'he';
+      i18n.changeLanguage(lang);
+    };
+  
+  
     return (
         <>
+        
+        <div style={{ display: 'flex', alignItems: 'center' }}>
             {/* <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/#about">
                 About Grovv
             </HashLink> */}
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/yaniv">
-                About Grovv
+                {t("header.About")}
             </HashLink>
-            
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/Services">
-                Services
+                {t("header.Services")}
             </HashLink>
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/Competence">
-                Competence - Portfolio
+                {t("header.Competence")}
             </HashLink>
-
-
-            
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/roman">
-                Partners
+                {t("header.Partners")}
             </HashLink>
-
-
-
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/clients2">
-                Costumers
+                {t("header.Costumers")}
             </HashLink>
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/contact">
-                Contact Us
+                {t("header.Contact")}
             </HashLink>
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/careers">
-                Careers
+                {t("header.Careers")}
             </HashLink>
-            {/* <Link className="text-white bg-green-500 hover:bg-blue-800 inline-flex items-center justify-center w-auto px-6 py-3 shadow-xl rounded-xl" smooth to="/get-demo">
-                Demo our products
-            </Link> */}
+
+
+{/*     "header" :{
+        "message":"Abot Grovv",
+         "About":"על החברה",
+         "Services":"שירותים",
+         "Competence":"תיק עבודות",
+         "Partners": "שותפים",
+         "Costumers":"Costumers",
+         "Contact": "Contact Us",
+         "Careers": "Careers"
+    },
+ */}
+
+<div className={`switch ${isRTL ? 'rtl' : 'ltr'}`}>
+        <input
+          id="language-toggle"
+          className="check-toggle check-toggle-round-flat"
+          type="checkbox"
+          checked={isRTL}
+          onChange={handleToggle}
+        />
+        <label htmlFor="language-toggle"></label>
+        <span className="on">HE</span>
+        <span className="off">EN</span>
+      </div>
+    </div>
         </>
     )
 }

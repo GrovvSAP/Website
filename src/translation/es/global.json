@@ -1,0 +1,18 @@
+{
+    
+
+    "header" :{
+        "message":"Abot Grovv",
+         "About":"על החברה",
+         "Services":"שירותים",
+         "Competence":"תיק עבודות",
+         "Partners": "שותפים",
+         "Costumers":"לקוחות",
+         "Contact": "צרו קשר",
+         "Careers": "קריירה בגרוב"
+    },
+
+    "home":{
+        "body":"נבדוק האם זה עובד "
+    }
+}

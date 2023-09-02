@@ -2,15 +2,46 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
 import heroImg from '../images/web-dev.svg';
+import  { useState } from 'react';
+import './LanguageToggle.css';
+
+
+
+
+ // language toggle button////
+ import { useTranslation } from 'react-i18next';
+
+
+
+
+
+
+
+
 
 const Hero = () => {
+    // language toggle button////
+    const[t, i18n] = useTranslation("global");
+    const func = (lang)=>{
+
+        i18n.changeLanguage(lang);
+   // language toggle button////
+
+    };
+
+   
+ 
     return (
         <>
             <div className="hero" id='hero'>
                 <div>
                     <NavBar />
                 </div>
+
                 
+
+
+      
                 <div className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" data-aos="zoom-in">
 
                     <div className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
@@ -19,9 +50,12 @@ const Hero = () => {
                             {/* We build digital solutions to help businesses scale */}
                                 Bespoke software solutions for your unique business needs
                             </h1>
+
+
+
                             <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">Grovv is a software company that specializes in digitalization and automation of business applications. Grovv specializes in shop floor management and advanced manufacturing processes.
-Grovv implements SAP for shop floor and develops solutions according to customer needs.
-Our customers are among the largest in the industry and we are prepared for a variety of projects.</div>
+                            Grovv implements SAP for shop floor and develops solutions according to customer needs.
+                            Our customers are among the largest in the industry and we are prepared for a variety of projects.</div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                                 <Link to="/contact" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
                                     Learn more
