@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 const NavLinks = () => {
   const [t, i18n] = useTranslation("global");
+  const [isLoading, setIsLoading] = useState(true);
 
   // Initialize language and content direction based on local storage
   const initialLanguage = localStorage.getItem('language') || 'en';
@@ -18,7 +19,6 @@ const NavLinks = () => {
 
   const [isRTL, setIsRTL] = useState(initialIsRTL);
 
-  // Watch for changes in the language and update content direction
   useEffect(() => {
     const lang = isRTL ? 'he' : 'en';
     i18n.changeLanguage(lang);
@@ -32,12 +32,20 @@ const NavLinks = () => {
       document.body.classList.remove('dir-rtl');
       document.body.classList.add('dir-ltr');
     }
+
+    // Mark loading as complete
+    setIsLoading(false);
   }, [isRTL, i18n]);
 
   // Toggle language and content direction
   const handleToggle = () => {
     setIsRTL(prevIsRTL => !prevIsRTL);
   };
+
+  // Render loading screen while isLoading is true
+  if (isLoading) {
+    return <div></div>;
+  }
 
     return (
         <>
