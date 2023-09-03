@@ -10,27 +10,35 @@ import { useTranslation } from 'react-i18next';
 
 
 const NavLinks = () => {
-    const [isRTL, setIsRTL] = useState(false);
-    const [t, i18n] = useTranslation("global");
-  
-    useEffect(() => {
-      const body = document.body;
-      if (isRTL) {
-        body.classList.remove('dir-ltr');
-        body.classList.add('dir-rtl');
-      } else {
-        body.classList.remove('dir-rtl');
-        body.classList.add('dir-ltr');
-      }
-    }, [isRTL]);
-  
-    const handleToggle = () => {
-      setIsRTL(prevIsRTL => !prevIsRTL);
-      const lang = isRTL ? 'en' : 'he';
-      i18n.changeLanguage(lang);
-    };
-  
-  
+  const [t, i18n] = useTranslation("global");
+
+  // Initialize language and content direction based on local storage
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  // Watch for changes in the language and update content direction
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    // Update the content direction based on the language
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+  }, [isRTL, i18n]);
+
+  // Toggle language and content direction
+  const handleToggle = () => {
+    setIsRTL(prevIsRTL => !prevIsRTL);
+  };
+
     return (
         <>
         
@@ -85,7 +93,7 @@ const NavLinks = () => {
         <span className="on">HE</span>
         <span className="off">EN</span>
       </div>
-    </div>
+      </div>
         </>
     )
 }

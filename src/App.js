@@ -22,6 +22,7 @@ import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import Services from './pages/Services';
 
+
 function App() {
   useEffect(() => {
     const aos_init = () => {
