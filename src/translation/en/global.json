@@ -90,17 +90,94 @@
             "UI/UX_userexperience_header":"UI/UX user experience",
             "UI/UX_userexperience_paragraph":"We craft user-friendly interfaces for your software, prioritizing seamless and enjoyable experiences."
 
+        },
+
+        "Pagefooter":{
+            "header1":"We",
+            "header2":"Build",
+
+            "paragraph":"With over 10 years experience in software analysis and design and a deep understanding of the latest IT trends and solutions, we provide customized recommendations and strategies to help you improve your operations, reduce costs, and increase efficiency."
+          
+        
         }
       
       
     
     
+    },
+
+
+    "Contact":{
+        "SideContent":{
+            "header1":"Office Address",
+            "paragraph1":"Horesh Haalonim 12, Ramat Yishai, Israel",
+            "header2":"Call Us",
+            "paragraph2":"Tel: 054-9050592",
+            "header3":"Send an E-mail",
+            "paragraph3":"Yuval.Goldenberg@Grovv.co.il"
+          
+        
+        },
+        "Form":{
+            "Header":"SEND US A MESSAGE",
+            "Firstname":"First Name",
+            "Lastname":"Last Name",
+            "Email":"Email",
+            "Phone":"Phone",
+            "Message":"Message",
+            "bottom":"SEND MESSAGE"
+
+          
+        
+        }
+    },
+    
+    "Footer":{
+        "FirstSection":{
+            "header":"Grovv",
+            "paragraph1":"Horesh Haalonim 12,",
+            "paragraph2":"Ramat Yishai,",
+            "paragraph3":"Israel."
+        },
+
+        "SecondSection":{
+            "header":"LINKS",
+            "About":"About",
+            "Services":"Services",
+            "Competence":"Competence",
+            "Partners":"Partners",
+            "Costumers":"Costumers",
+            "Contact Us":"Contact Us",
+            "Careers":"Careers"
+          
+        
+        },
+        "ThirdSection":{
+            "header":"OUR SERVICES",
+            "Specification":"Specification",
+            "ProcessAnalysess":"Process Analysess",
+            "SystemImplementation":"System Implementation",
+            "User&AcceptanceTests":"User & Acceptance tests",
+            "SystemIntegration":"System Integration",
+            "CustomTailorMadeDevelopments":"Custom Tailor Made Developments",
+            "DataMigration":"Data Migration",
+            "ProjectManagement":"Project Management",
+            "UI/UXuserExperience":"UI/UX user experience"
+            
+            
+            
+        },
+        "ForthSection":{
+            "header":"SOCIAL MEDIA LINKS",
+            "paragraph":"FOLLOW US ON SOCIAL MEDIA"
+          
+        }
+
     }
 
  
-   
 
-  
+ 
   
    
 

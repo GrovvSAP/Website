@@ -93,12 +93,95 @@
             "UI/UX_userexperience_paragraph":"אנו יוצרים ממשקים ידידותיים למשתמש עבור התוכנה שלך, תוך עדיפות לחוויות חלקות ומהנות."
           
         
+        },
+
+        "Pagefooter":{
+            "header":"אנחנו",
+            "header2":"יוצרים",
+
+            "paragraph":"עם למעלה מ-10 שנות ניסיון בניתוח ועיצוב תוכנה והבנה מעמיקה של מגמות ופתרונות ה-IT העדכניים ביותר, אנו מספקים המלצות ואסטרטגיות מותאמות אישית שיעזרו לך לשפר את התפעול שלך, להפחית עלויות ולהגביר את היעילות."
+          
+        
         }
       
       
     
+      
+      
     
+    
+    },
+
+    "Contact":{
+        "SideContent":{
+            "header":"כתובת המשרדים שלנו",
+            "paragraph1":"חורש האלונים 12, רמת ישי, ישראל",
+            "header2":"צרו קשר",
+            "paragraph2":"פאלפון: 054-9050592",
+            "header3":"שלחו לנו אימייל",
+            "paragraph3":"Yuval.Goldenberg@Grovv.co.il"
+          
+        
+        },
+        "Form":{
+            "Header":"צרו איתנו קשר",
+            "Firstname":"שם פרטי",
+            "Lastname":"שם משפחה",
+            "Email":"אימייל",
+            "Phone":"מספר פאלפון",
+            "Message":"הודעה",
+            "bottom":"שלח הודעה"
+
+          
+        
+        }
+
+    },
+    "Footer":{
+        "FirstSection":{
+            "header":"Grovv",
+            "paragraph1":"חורש האלונים 12,",
+            "paragraph2":"רמת ישי,",
+            "paragraph3":"ישראל."
+        },
+
+        "SecondSection":{
+            "header":"קישורים",
+            "About":"על החברה",
+            "Services":"שירותים",
+            "Competence":"תיק עבודות",
+            "Partners":"שותפים",
+            "Costumers":"לקוחות",
+            "Contact Us":"צרו קשר",
+            "Careers":"קריירה בגרוב"
+          
+        
+        },
+        "ThirdSection":{
+            "header":"השירותים שלנו",
+            "Specification":"איפיון",
+            "ProcessAnalysess":"ניתוח תהליכים",
+            "SystemImplementation":"הטמעת מערכות",
+            "User&AcceptanceTests":"מבחני משתמש וקבלה",
+            "SystemIntegration":"שילוב מערכות",
+            "CustomTailorMadeDevelopments":"פיתוחים בהתאמה אישית",
+            "DataMigration":"העברת נתונים",
+            "ProjectManagement":"ניהול פרויקטים",
+            "UI/UXuserExperience":"חווית משתמש UI/UX"
+            
+            
+          
+        
+        },
+        "ForthSection":{
+            "header":"קישורים למדיה חברתית",
+            "paragraph":"קראו עלינו במדיה החברתית"
+          
+        }
+
     }
+
+ 
 
  
   

@@ -1,11 +1,43 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { AiFillLinkedin } from 'react-icons/ai';
-
-
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    setIsLoading(false);
+  }, [isRTL, i18n]);
+
+  const handleToggle = () => {
+    setIsRTL((prevIsRTL) => !prevIsRTL);
+  };
+
+  if (isLoading) {
+    return <div></div>;
+  }
+
+
     return (
         <>
             <footer>
@@ -17,12 +49,12 @@ const Footer = () => {
                     {/* 1st block */}
                     <div className="col-span-12 lg:col-span-4">
                         <div className="box-border border-b-4 border-gre-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
-                            <h3 className="font-bold text-4xl mb-4">Grovv</h3>
+                            <h3 className="font-bold text-4xl mb-4">{t("Footer.FirstSection.header")}</h3>
                             <div className='text-md font-medium text-gray-600'>
                                 
-                                <p>Horesh Haalonim 12,</p>
-                                <p>Ramat Yishai,</p>
-                                <p>Israel.</p>
+                                <p>{t("Footer.FirstSection.paragraph1")}</p>
+                                <p>{t("Footer.FirstSection.paragraph2")}</p>
+                                <p>{t("Footer.FirstSection.paragraph3")}</p>
                             </div>
                         </div>
                     </div>
@@ -30,28 +62,28 @@ const Footer = () => {
 
                     {/* 2nd block */}
                     <div className="col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
+                        <h6 className="text-[#013289] text-xl font-bold mb-4">{t("Footer.SecondSection.header")}</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About </HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.About")} </HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Services")}</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Competence</HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Competence")}</HashLink>
                         </li>     
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Partners</HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Partners")}</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Costumers</HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Costumers")}</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact Us </HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Contact Us")}</HashLink>
                         </li>   
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Careers </HashLink>
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Careers")}</HashLink>
                         </li> 
                                        
                         </ul>
@@ -61,37 +93,37 @@ const Footer = () => {
 
                     {/* 3rd block */}
                     <div className="col-span-6 md:col-span-6 lg:col-span-4 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
+                        <h6 className="text-[#013289] text-xl font-bold mb-4">{t("Footer.ThirdSection.header")}</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <Link to="" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Specification</Link>
+                            <Link to="" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.Specification")}</Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Process Analysess</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.ProcessAnalysess")}</Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">System Implementation</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.SystemImplementation")}</Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">User & Acceptance tests</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.User&AcceptanceTests")}</Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">System Integration</Link>
-                        </li>
-
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Custom Tailor Made Developments</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.SystemIntegration")}</Link>
                         </li>
 
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Data Migration</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.CustomTailorMadeDevelopments")}</Link>
                         </li>
 
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Project Management</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.DataMigration")}</Link>
+                        </li>
+
+                        <li className="mb-2">
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.ProjectManagement")}</Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">UI/UX user experience</Link>
+                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.UI/UXuserExperience")}</Link>
                         </li>
 
                         </ul>
@@ -100,11 +132,11 @@ const Footer = () => {
                     {/* 4th block */}
                     <div className="col-span-12 text-center mx-auto lg:col-span-3 font-bold uppercase text-gre-900">
                         <div className="text-xl mb-6">
-                             Social Media Links.
+                        {t("Footer.ForthSection.header")}
                         </div>
 
                                 <div className="text-md font-medium mb-6">
-                                    Follow us on social media.
+                                {t("Footer.ForthSection.paragraph")}
                                 </div>
                         <div className="mx-auto text-center mt-2">
                                 <ul className="flex justify-center mb-4 md:mb-0">

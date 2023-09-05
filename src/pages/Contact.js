@@ -1,12 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
-import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
+import { useDocTitle } from '../components/CustomHook';
 import emailjs from '@emailjs/browser';
 import Notiflix from 'notiflix';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    setIsLoading(false);
+  }, [isRTL, i18n]);
+
+    
     useDocTitle('MLD | Molad e Konsult - Send us a message')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -100,7 +125,7 @@ const Contact = () => {
 
                     <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
                         <div className="flex">
-                            <h1 className="font-bold text-center lg:text-left text-green-900 uppercase text-4xl">Send us a message</h1>
+                            <h1 className="font-bold text-center lg:text-left text-green-900 uppercase text-4xl">  {t("Contact.Form.Header")}</h1>
                         </div>
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                                 <div>
@@ -108,7 +133,7 @@ const Contact = () => {
                                         name="first_name" 
                                         className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                         type="text" 
-                                        placeholder="First Name*" 
+                                        placeholder={t("Contact.Form.Firstname")}
                                         value={firstName}
                                         onChange={(e)=> setFirstName(e.target.value)}
                                         onKeyUp={clearErrors}
@@ -123,7 +148,7 @@ const Contact = () => {
                                         name="last_name" 
                                         className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                         type="text" 
-                                        placeholder="Last Name*"
+                                        placeholder={t("Contact.Form.Lastname")}
                                         value={lastName}
                                         onChange={(e)=> setLastName(e.target.value)}
                                         onKeyUp={clearErrors}
@@ -138,7 +163,7 @@ const Contact = () => {
                                         name="email"
                                         className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                         type="email" 
-                                        placeholder="Email*"
+                                        placeholder={t("Contact.Form.Email")}
                                         value={email}
                                         onChange={(e)=> setEmail(e.target.value)}
                                         onKeyUp={clearErrors}   
@@ -153,7 +178,7 @@ const Contact = () => {
                                         name="phone_number" 
                                         className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                         type="number" 
-                                        placeholder="Phone*"
+                                        placeholder={t("Contact.Form.Phone")}
                                         value={phone}
                                         onChange={(e)=> setPhone(e.target.value)}
                                         onKeyUp={clearErrors}
@@ -166,7 +191,7 @@ const Contact = () => {
                         <div className="my-4">
                             <textarea 
                                 name="message" 
-                                placeholder="Message*" 
+                                placeholder={t("Contact.Form.Message")}
                                 className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                 value={message}
                                 onChange={(e)=> setMessage(e.target.value)}
@@ -179,7 +204,7 @@ const Contact = () => {
                         <div className="my-2 w-1/2 lg:w-2/4">
                             <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-green-900 text-gray-100 p-3 rounded-lg w-full 
                                     focus:outline-none focus:shadow-outline">
-                                Send Message
+                                {t("Contact.Form.bottom")}
                             </button>
                         </div>
                 </div>
@@ -193,8 +218,8 @@ const Contact = () => {
                                         <i className="fas fa-map-marker-alt pt-2 pr-2" />
                                     </div>
                                     <div className="flex flex-col">
-                                        <h2 className="text-2xl">Office Address</h2>
-                                        <p className="text-gray-400">Horesh Haalonim 12, Ramat Yishai, Israel</p>
+                                        <h2 className="text-2xl">{t("Contact.SideContent.header1")}</h2>
+                                        <p className="text-gray-400">{t("Contact.SideContent.paragraph1")}</p>
                                     </div>
                                 </div>
                     
@@ -204,12 +229,12 @@ const Contact = () => {
                         </div>
 
                         <div className="flex flex-col">
-                        <h2 className="text-2xl">Call Us</h2>
-                        <p className="text-gray-400">Tel: 054-9050592</p>
+                        <h2 className="text-2xl">{t("Contact.SideContent.header2")}</h2>
+                        <p className="text-gray-400">{t("Contact.SideContent.paragraph2")}</p>
                         
                             <div className='mt-5'>
-                                <h2 className="text-2xl">Send an E-mail</h2>
-                                <p className="text-gray-400">Yuval.Goldenberg@Grovv.co.il</p>
+                                <h2 className="text-2xl">{t("Contact.SideContent.header3")}</h2>
+                                <p className="text-gray-400">{t("Contact.SideContent.paragraph3")}</p>
                             </div>
                        
                         </div>
