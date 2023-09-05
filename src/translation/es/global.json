@@ -12,7 +12,90 @@
          "Careers": "קריירה  בגרוב"
     },
 
-    "home":{
-        "body":"נבדוק האם זה עובד שילוב של ernglish עם עברית "
+    "hero":{
+        "header":"פתרונות תוכנה בהתאמה אישית לצרכי העסק הייחודיים שלך",
+        "paragraph":"Grovv היא חברת תוכנה המתמחה בדיגיטליזציה ואוטומציה של אפליקציות עסקיות. גרוב מתמחה בניהול רצפת חנויות ותהליכי ייצור מתקדמים. Grovv מיישמת SAP לרצפת החנות ומפתחת פתרונות בהתאם לצרכי הלקוח. לקוחותינו הם מהגדולים בענף ואנו ערוכים למגוון פרויקטים.לקוחות",
+        "button": "לעוד מידע"
+        
+    },
+
+
+    "hero2":{
+         "header":"אנו מפתחים אפליקציות אינטרנט ומובייל באיכות גבוהה עבור ארגונים, מוסדות וחברות קטנות ובינוניות",
+         "paragraph":"הצוות שלנו רחב מאוד בפיתוח תוכנה ומוכן לעזור בפיתוח האפליקציות לבחירתך.",
+         "paragraph2":"אנו לוקחים אחריות על בניית פתרונות תוכנה מותאמים אישית המספקים אוטומציה של התהליכים העסקיים שלך ומשפרים את היעילות.",
+         "button": "לעוד מידע"
+    
+    },
+
+  
+    "Services":{
+        "User&AcceptanceTests":{
+            "User&AcceptanceTests_header":"מבחני משתמש וקבלה",
+            "User&AcceptanceTests_paragraph":""
+          
+        
+        },
+        "SystemImplementaion":{
+            "SystemImplementaion_header":"הטמעת מערכת",
+            "SystemImplementaion_paragraph":""
+          
+        
+        },
+        "ProcessAnalysess":{
+            "ProcessAnalysess_header":"ניתוח תהליכים",
+            "ProcessAnalysess_paragraph":""
+          
+        
+        },
+        "Specification":{
+            "Specification_header":"איפיון",
+            "Specification_paragraph":""
+          
+
+        
+        },  
+        
+            "SystemIntegration":{
+            "SystemIntegration_header":"שילוב מערכות",
+            "SystemIntegration_paragraph":""
+          
+        
+        }, "CustomTailorMadeDevelopments":{
+            "CustomTailorMadeDevelopments_header":"פיתוחים בהתאמה אישית",
+            "CustomTailorMadeDevelopments_paragraph":""
+          
+        
+        },
+      
+        "DataMigration":{
+            "DataMigration_header":"העברת נתונים",
+            "DataMigration_paragraph":""
+          
+        
+        },
+      
+        "ProjectManagement":{
+            "ProjectManagement_header":"ניהול פרויקטים",
+            "ProjectManagement_paragraph":""
+          
+        
+        },
+      
+        "UI/UX_userexperience":{
+            "UI/UX_userexperience_header":"חווית משתמש UI/UX",
+            "UI/UX_userexperience_paragraph":""
+          
+        
+        }
+      
+      
+    
+    
     }
+
+ 
+  
+   
+
 }

@@ -15,7 +15,87 @@
     
     },
 
-    "home":{
-        "body":"A store designed for all your pets needs"
+    "hero":{
+        "header":"Bespoke software solutions for your unique business needs",
+        "paragraph":"Grovv is a software company that specializes in digitalization and automation of business applications. Grovv specializes in shop floor management and advanced manufacturing processes. Grovv implements SAP for shop floor and develops solutions according to customer needs. Our customers are among the largest in the industry and we are prepared for a variety of projects.",
+        "button": "Learn more"
+        
+    },
+
+    "hero2":{
+        "header":"We develop high quality bespoke web and mobile applications for organizations, institutions and SMEs",
+        "paragraph":"Our team is well vast in software development and is ready to help develop the applications of your choice.   We take responsibility for building custom software solutions that caters for automation of your business processes and improve efficiency.",
+        "button": "Learn more"
+        
+    },
+
+
+    "Services":{
+        "User&AcceptanceTests":{
+            "User&AcceptanceTests_header":"User & Acceptance tests",
+            "User&AcceptanceTests_paragraph":"Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions."
+        },
+        
+        "SystemImplementaion":{
+            "SystemImplementaion_header":"System Implementaion",
+            "SystemImplementaion_paragraph":"We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space."
+        },
+
+        "ProcessAnalysess":{
+            "ProcessAnalysess_header":"Process Analysess",
+            "ProcessAnalysess_paragraph":"We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility."
+        },
+
+        "Specification":{
+            "Specification_header":"Specification",
+            "Specification_paragraph":"Bespoke software solutions for your unique business need"
+          
+
+        
+        },  
+        
+            "SystemIntegration":{
+            "SystemIntegration_header":"System Integration",
+            "SystemIntegration_paragraph":"We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients."
+          
+        
+        }, "CustomTailorMadeDevelopments":{
+            "CustomTailorMadeDevelopments_header":"Custom Tailor Made Developments",
+            "CustomTailorMadeDevelopments_paragraph":"We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility."
+
+        },
+        
+      
+        "DataMigration":{
+            "DataMigration_header":"Data Migration",
+            "DataMigration_paragraph":"We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space."
+
+        },
+
+      
+        "ProjectManagement":{
+            "ProjectManagement_header":"Project Management",
+            "ProjectManagement_paragraph":"Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions."
+
+        },
+
+      
+        "UI/UX_userexperience":{
+            "UI/UX_userexperience_header":"UI/UX user experience",
+            "UI/UX_userexperience_paragraph":"Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions."
+
+        }
+      
+      
+    
+    
     }
+
+ 
+   
+
+  
+  
+   
+
 }

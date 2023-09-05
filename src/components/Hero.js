@@ -1,35 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
 import heroImg from '../images/web-dev.svg';
-import  { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './LanguageToggle.css';
 
 
-
-
- // language toggle button////
- import { useTranslation } from 'react-i18next';
-
-
-
-
-
-
-
-
-
 const Hero = () => {
-    // language toggle button////
-    const[t, i18n] = useTranslation("global");
-    const func = (lang)=>{
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
 
-        i18n.changeLanguage(lang);
-   // language toggle button////
+  // Initialize language and content direction based on local storage
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
 
-    };
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
 
-   
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    // Update the content direction based on the language
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    // Mark loading as complete
+    setIsLoading(false);
+  }, [isRTL, i18n]);
+
+  // Toggle language and content direction
+  const handleToggle = () => {
+    setIsRTL(prevIsRTL => !prevIsRTL);
+  };
+
+  // Render loading screen while isLoading is true
+  if (isLoading) {
+    return <div></div>;
+  }
+
  
     return (
         <>
@@ -48,17 +62,15 @@ const Hero = () => {
                         <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold text-green-900">
                             {/* We build digital solutions to help businesses scale */}
-                                Bespoke software solutions for your unique business needs
+                            {t("hero.header")}
                             </h1>
 
 
 
-                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">Grovv is a software company that specializes in digitalization and automation of business applications. Grovv specializes in shop floor management and advanced manufacturing processes.
-                            Grovv implements SAP for shop floor and develops solutions according to customer needs.
-                            Our customers are among the largest in the industry and we are prepared for a variety of projects.</div>
+                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">{t("hero.paragraph")}</div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                                 <Link to="/contact" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
-                                    Learn more
+                                {t("hero.button")}
                                     <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                                 </Link>
                                 {/* <Link to="/contact" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
