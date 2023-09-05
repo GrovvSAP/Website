@@ -30,27 +30,33 @@
 
   
     "Services":{
+        "PageHeader":{
+            "header":"שירותים",
+            "paragraph":"אנו מחויבים עמוקות לצמיחה ולהצלחת לקוחותינו"
+          
+        
+        },
         "User&AcceptanceTests":{
             "User&AcceptanceTests_header":"מבחני משתמש וקבלה",
-            "User&AcceptanceTests_paragraph":""
+            "User&AcceptanceTests_paragraph":"שירות ייעוץ ה-IT שלנו מספק הכוונה ותמיכה של מומחים לעסקים ולאנשים המעוניינים לייעל את הפתרונות הטכנולוגיים שלהם."
           
         
         },
         "SystemImplementaion":{
-            "SystemImplementaion_header":"הטמעת מערכת",
-            "SystemImplementaion_paragraph":""
+            "SystemImplementaion_header":"הטמעת מערכות",
+            "SystemImplementaion_paragraph":"אנו יודעים להטמיע מערכות מורכבות מקצה לקצה,לפי דרישות הלקוח"
           
         
         },
         "ProcessAnalysess":{
             "ProcessAnalysess_header":"ניתוח תהליכים",
-            "ProcessAnalysess_paragraph":""
+            "ProcessAnalysess_paragraph":"אנו מפתחים יישומים ניידים חוצי פלטפורמות איכותיים ומותאמים אישית שהם חזקים ומותאמים לביצועים, מדרגיות ונגישות."
           
         
         },
         "Specification":{
             "Specification_header":"איפיון",
-            "Specification_paragraph":""
+            "Specification_paragraph":"חברת התוכנה שלנו מתמחה בהצעת שירותי מפרט מקיפים המתארים בקפידה את הדרישות, הפונקציונליות ומרכיבי העיצוב המדויקים של פרויקט התוכנה שלך, תוך הבטחת מפת דרכים ברורה לפיתוח ומזעור תיקונים יקרים."
           
 
         
@@ -58,33 +64,33 @@
         
             "SystemIntegration":{
             "SystemIntegration_header":"שילוב מערכות",
-            "SystemIntegration_paragraph":""
+            "SystemIntegration_paragraph":"אנו מתמחים ביצירה ואופטימיזציה של אתרים איכותיים ומותאמים אישית לעסקים וארגונים בכל הגדלים. בניית אתרים ואפליקציות מותאמים למובייל וקלים לשימוש עבור לקוחות."
           
         
         }, "CustomTailorMadeDevelopments":{
             "CustomTailorMadeDevelopments_header":"פיתוחים בהתאמה אישית",
-            "CustomTailorMadeDevelopments_paragraph":""
+            "CustomTailorMadeDevelopments_paragraph":"אנו מפתחים יישומים ניידים חוצי פלטפורמות איכותיים ומותאמים אישית שהם חזקים ומותאמים לביצועים, מדרגיות ונגישות."
           
         
         },
       
         "DataMigration":{
             "DataMigration_header":"העברת נתונים",
-            "DataMigration_paragraph":""
+            "DataMigration_paragraph":"אנו מספקים שירותי רישום דומיינים ואירוח אתרים ליחידים וארגונים כדי לאפשר להם לקבל נראות במרחב הדיגיטלי."
           
         
         },
       
         "ProjectManagement":{
             "ProjectManagement_header":"ניהול פרויקטים",
-            "ProjectManagement_paragraph":""
+            "ProjectManagement_paragraph":"חברת התוכנה שלנו מצטיינת במתן שירותי ניהול פרויקטים מהשורה הראשונה, תוך שימוש במתודולוגיות וכלים מובילים בתעשייה לתכנון, ביצוע ומעקב קפדני של פרויקטי תוכנה, תוך הבטחת הקצאת משאבים יעילה ואספקה ​​בזמן."
           
         
         },
       
         "UI/UX_userexperience":{
             "UI/UX_userexperience_header":"חווית משתמש UI/UX",
-            "UI/UX_userexperience_paragraph":""
+            "UI/UX_userexperience_paragraph":"אנו יוצרים ממשקים ידידותיים למשתמש עבור התוכנה שלך, תוך עדיפות לחוויות חלקות ומהנות."
           
         
         }

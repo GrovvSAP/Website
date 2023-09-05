@@ -94,7 +94,7 @@ const Services = () => {
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.SystemImplementaion.ProcessAnalysess_header")}</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.SystemImplementaion.SystemImplementaion_header")}</h2>
                                 <p className="text-md font-medium">
                                     We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space.
                                 </p>
@@ -106,7 +106,7 @@ const Services = () => {
                             <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
                                 <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.User&AcceptanceTests.User&AcceptanceTests_header")}</h2>
                                 <p className="text-md font-medium">
-                                    Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions.
+                                {t("Services.User&AcceptanceTests.User&AcceptanceTests_paragraph")}
                                 </p>
                             </div>
                         </div> 
@@ -114,9 +114,9 @@ const Services = () => {
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                             <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                <h2 className="font-semibold my-4 text-2xl text-center">System Integration</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center">{t("Services.SystemIntegration.SystemIntegration_header")}</h2>
                                 <p className="text-md font-medium">
-                                    We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.
+                                {t("Services.SystemIntegration.SystemIntegration_paragraph")}
                                 </p>
                             </div>
                         </div>
@@ -124,9 +124,9 @@ const Services = () => {
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                             <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Custom Tailor Made Developments</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center">{t("Services.CustomTailorMadeDevelopments.CustomTailorMadeDevelopments_header")}</h2>
                                 <p className="text-md font-medium">
-                                    We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility.
+                                {t("Services.CustomTailorMadeDevelopments.CustomTailorMadeDevelopments_paragraph")}
                                 </p>
                             </div>
                         </div>
@@ -134,9 +134,9 @@ const Services = () => {
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">Data Migration</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.DataMigration.DataMigration_header")}</h2>
                                 <p className="text-md font-medium">
-                                    We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space.
+                                {t("Services.DataMigration.DataMigration_paragraph")}
                                 </p>
                             </div>
                         </div>
@@ -144,18 +144,18 @@ const Services = () => {
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                             <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">Project Management</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.ProjectManagement.ProjectManagement_header")}</h2>
                                 <p className="text-md font-medium">
-                                    Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions.
+                                {t("Services.ProjectManagement.ProjectManagement_paragraph")}
                                 </p>
                             </div>
                         </div> 
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                             <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                <h2 className="font-semibold my-4 text-2xl text-center ">UI/UX user experience</h2>
+                                <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.UI/UX_userexperience.UI/UX_userexperience_header")}</h2>
                                 <p className="text-md font-medium">
-                                    Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions.
+                                {t("Services.UI/UX_userexperience.UI/UX_userexperience_paragraph")}
                                 </p>
                             </div>
                         </div> 

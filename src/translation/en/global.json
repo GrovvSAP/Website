@@ -31,6 +31,12 @@
 
 
     "Services":{
+        "PageHeader":{
+            "header":"SERVICES",
+            "paragraph":"שירות ייעוץ ה-IT שלנו מספק הכוונה ותמיכה של מומחים לעסקים ולאנשים המעוניינים לייעל את הפתרונות הטכנולוגיים שלהם."
+          
+        
+        },
         "User&AcceptanceTests":{
             "User&AcceptanceTests_header":"User & Acceptance tests",
             "User&AcceptanceTests_paragraph":"Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions."
@@ -48,7 +54,7 @@
 
         "Specification":{
             "Specification_header":"Specification",
-            "Specification_paragraph":"Bespoke software solutions for your unique business need"
+            "Specification_paragraph":"Our software company specializes in offering comprehensive specification services that meticulously outline the precise requirements, functionalities, and design elements of your software project, ensuring a clear roadmap for development and minimizing costly revisions."
           
 
         
@@ -75,14 +81,14 @@
       
         "ProjectManagement":{
             "ProjectManagement_header":"Project Management",
-            "ProjectManagement_paragraph":"Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions."
+            "ProjectManagement_paragraph":"Our software company excels in providing top-notch project management services, employing industry-leading methodologies and tools to meticulously plan, execute, and monitor software projects, ensuring efficient resource allocation and timely delivery."
 
         },
 
       
         "UI/UX_userexperience":{
             "UI/UX_userexperience_header":"UI/UX user experience",
-            "UI/UX_userexperience_paragraph":"Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions."
+            "UI/UX_userexperience_paragraph":"We craft user-friendly interfaces for your software, prioritizing seamless and enjoyable experiences."
 
         }
       
