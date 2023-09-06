@@ -218,7 +218,7 @@ const Contact = () => {
                                         <i className="fas fa-map-marker-alt pt-2 pr-2" />
                                     </div>
                                     <div className="flex flex-col">
-                                        <h2 className="text-2xl">{t("Contact.SideContent.header1")}</h2>
+                                        <h2 className="text-2xl">{t("Contact.SideContent.header")}</h2>
                                         <p className="text-gray-400">{t("Contact.SideContent.paragraph1")}</p>
                                     </div>
                                 </div>

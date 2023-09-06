@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 import Barkan from '../images/clients/Barkan.png';
 import Mekorot from '../images/clients/Mekorot.png';
 import temo from '../images/clients/temo.png';
@@ -18,6 +18,25 @@ const clientImage = {
 }
 
 const Clients = () => {
+    const [isLoading, setIsLoading] = useState(true);
+    const initialLanguage = localStorage.getItem('language') || 'en';
+    const initialIsRTL = initialLanguage === 'he';
+    const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+    const { t, i18n } = useTranslation('global'); // Initialize useTranslation
+
+    useEffect(() => {
+        const lang = isRTL ? 'he' : 'en';
+        i18n.changeLanguage(lang);
+        localStorage.setItem('language', lang);
+        setIsLoading(false);
+    }, [isRTL, i18n]);
+
+    const handleToggle = () => {
+        setIsRTL((prevIsRTL) => !prevIsRTL);
+    };
+
+   
 
     return (
         <>
@@ -29,11 +48,11 @@ const Clients = () => {
         
             <section data-aos="fade-up" style={{ marginTop: '120px' }} className="bg-gray-100 py-12" >
                 <div className="my-4 py-4">
-                        <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold">Our Clients</h2>
+                        <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold"> {t("Clients.header")}</h2>
                         <div className='flex justify-center'>
                             <div className='w-24 border-b-4 border-green-900'></div>
                         </div>
-                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-green-900">Renowned clients place their trust in Grovv due to our unwavering excellence and reliability</h2>
+                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-green-900"> {t("Clients.paragraph")}</h2>
                         
                     </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
@@ -14,79 +14,46 @@ import img4 from '../images/consultation.svg';
 import img5 from '../images/SYSTEMA.png';
 import img6 from '../images/sap.png';
 
+import React, { useEffect, useState } from 'react';
+
+import { useTranslation } from 'react-i18next';
+
 
 
 
 
 const Contact = () => {
-    useDocTitle('MLD | Molad e Konsult - Send us a message')
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [message, setMessage] = useState('')
-    const [errors, setErrors] = useState([])
-
-    const clearErrors = () => {
-        setErrors([])
-    }
-
-    const clearInput = () => {
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhone('')
-        setMessage('')
-    }
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        document.getElementById('submitBtn').disabled = true;
-        document.getElementById('submitBtn').innerHTML = 'Loading...';
-        let fData = new FormData();
-        fData.append('first_name', firstName)
-        fData.append('last_name', lastName)
-        fData.append('email', email)
-        fData.append('phone_number', phone)
-        fData.append('message', message)
-
-        axios({
-            method: "post",
-            url: process.env.REACT_APP_CONTACT_API,
-            data: fData,
-            headers: {
-                'Content-Type':  'multipart/form-data'
-            }
-        })
-        .then(function (response) {
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            clearInput()
-            //handle success
-            Notiflix.Report.success(
-                'Success',
-                response.data.message,
-                'Okay',
-            );
-        })
-        .catch(function (error) {
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            //handle error
-            const { response } = error;
-            if(response.status === 500) {
-                Notiflix.Report.failure(
-                    'An error occurred',
-                    response.data.message,
-                    'Okay',
-                );
-            }
-            if(response.data.errors !== null) {
-                setErrors(response.data.errors)
-            }
-            
-        });
-    }
+    const [t, i18n] = useTranslation('global');
+    const [isLoading, setIsLoading] = useState(true);
+    const initialLanguage = localStorage.getItem('language') || 'en';
+    const initialIsRTL = initialLanguage === 'he';
+    const [isRTL, setIsRTL] = useState(initialIsRTL);
+  
+    useDocTitle('MLD | Molad e Konsult - Send us a message');
+  
+    useEffect(() => {
+      const lang = isRTL ? 'he' : 'en';
+      i18n.changeLanguage(lang);
+      localStorage.setItem('language', lang);
+  
+      if (isRTL) {
+        document.body.classList.remove('dir-ltr');
+        document.body.classList.add('dir-rtl');
+      } else {
+        document.body.classList.remove('dir-rtl');
+        document.body.classList.add('dir-ltr');
+      }
+  
+      setIsLoading(false);
+    }, [isRTL, i18n]);
+  
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState([]);
+  
     return (
         <>
             <div>
@@ -97,12 +64,12 @@ const Contact = () => {
         <section data-aos="zoom-in-down">
             
                 <div className="my-4 py-4">
-                    <h2 className="my-2 text-center text-3xl text-85CD40 uppercase font-bold">services</h2>
+                    <h2 className="my-2 text-center text-3xl text-85CD40 uppercase font-bold">{t("Partners.header1")}</h2>
                     
                     <div className='flex justify-center'>
                         <div className='w-24 border-b-4 border-85CD40'></div>
                     </div>
-                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-85CD40">We cooperate with the largest companies in the economy</h2>
+                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-85CD40">{t("Partners.header2")}</h2>
                 </div>
 
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
@@ -110,10 +77,10 @@ const Contact = () => {
         <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
             <div className="m-2 text-justify text-sm">
                 <img alt="card img" className="mx-auto rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img6} /> {/* Add mx-auto */}
-                <h2 className="font-semibold my-4 text-2xl text-center">Systems, Applications, and Products </h2>
+                <h2 className="font-semibold my-4 text-2xl text-center">{t("Partners.leftCardHeader")} </h2>
                 <p className="text-md font-medium">
                  
-SAP Company is a global leader recognized for its transformative software solutions that empower businesses by seamlessly integrating processes, data, and resources, driving operational excellence, and fostering innovation across industries.
+                {t("Partners.leftCardContent")} 
                 </p>
             </div>
         </div>
@@ -121,10 +88,9 @@ SAP Company is a global leader recognized for its transformative software soluti
         <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
             <div className="m-2 text-justify text-sm">
                 <img alt="card img" className="mx-auto rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img5}     /> {/* Add mx-auto */}
-                <h2 className="font-semibold my-4 text-2xl text-center">Art of
-Automation</h2>
+                <h2 className="font-semibold my-4 text-2xl text-center">{t("Partners.rightCardHeader")} </h2>
                 <p className="text-md font-medium">
-                Systema Company stands as a pioneering technology firm, renowned for its cutting-edge software solutions that revolutionize and optimize various aspects of business operations, ultimately empowering organizations to achieve higher levels of efficiency, productivity, and success.
+                {t("Partners.rightCardContent")}
                 </p>
             </div>
         </div>                    
@@ -152,9 +118,9 @@ Automation</h2>
                         <div className='text-85CD40 mb-4'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" className='fill-current'><path d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"></path></svg>
                         </div>
-                        <h3 className="text-3xl  text-85CD40 font-bold">We <span className='font-black'>Collaborate</span></h3>
+                        <h3 className="text-3xl  text-85CD40 font-bold">{t("Partners.footerHeader1")} <span>  {t("Partners.footerHeader2")}</span></h3>
                         <div>
-                            <p className='my-3 text-xl text-gray-600 font-semibold'>We can collaborate with your existing tech team to scale existing software applications or design customized software applications that suits your everyday need and simplifies various processes.</p>
+                            <p className='my-3 text-xl text-gray-600 font-semibold'>  {t("Partners.footerContent")}</p>
                         </div>
                     </div>
                 </div>

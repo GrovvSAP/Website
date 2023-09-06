@@ -1,13 +1,36 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 const Cta = () => {
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    setIsLoading(false);
+  }, [isRTL, i18n]);
     return ( 
         <div className="w-full flex items-center justify-center text-white cta">
             <div className="mx-8 w-full h-96 text-center lg:text-left py-16 px-12 flex lg:justify-between items-center">                    
                 <div className="w-full flex flex-col lg:flex-row lg:justify-around">
                     <div className="mb-4">
-                        <p className='text-2xl md:text-4xl font-bold mb-4'>Forge your path in tech alongside us  </p>
-                        <p className="text-lg md:text-2xl">where collaboration breeds excellence, and your career accelerates amidst exciting challenges. </p>
+                        <p className='text-2xl md:text-4xl font-bold mb-4'> {t("Careers.CTAheader")}  </p>
+                        <p className="text-lg md:text-2xl">{t("Careers.CTAContent")} </p>
                     </div>
                     
                     <div className="w-full lg:w-72 pt-6 lg:mx-12">

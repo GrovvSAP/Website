@@ -1,106 +1,65 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
-import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
-// import emailjs from 'emailjs-com';
-import Notiflix from 'notiflix';
-import "./Careers.css";
+import { useTranslation } from 'react-i18next';
+import { useDocTitle } from '../components/CustomHook';
 import emailjs from '@emailjs/browser';
+import './Careers.css';
 
 const Contact = () => {
-    useDocTitle('MLD | Molad e Konsult - Send us a message')
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [message, setMessage] = useState('')
-    const [errors, setErrors] = useState([])
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
 
-    const clearErrors = () => {
-        setErrors([])
+  useDocTitle('MLD | Molad e Konsult - Send us a message');
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
     }
 
-    const clearInput = () => {
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhone('')
-        setMessage('')
-    }
+    setIsLoading(false);
+  }, [isRTL, i18n]);
 
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState([]);
 
+  const clearErrors = () => {
+    setErrors([]);
+  }
 
+  const clearInput = () => {
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  }
 
-    function sendEmail(e) {
-        e.preventDefault();
-        emailjs.sendForm('service_d82ze2f', 'template_aloxwud', e.target, 'NwypP86Fv71GM6sTO')
-          .then((result) => {
-          
-            alert("Your message sent successfully!!");
-            clearInput(); // Reset input fields
-          }, (error) => {
-              console.log(error.text);
-          });
-      }
-
-
-
-
-
-
-
-
-
-
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-    //     document.getElementById('submitBtn').disabled = true;
-    //     document.getElementById('submitBtn').innerHTML = 'Loading...';
-    //     let fData = new FormData();
-    //     fData.append('first_name', firstName)
-    //     fData.append('last_name', lastName)
-    //     fData.append('email', email)
-    //     fData.append('phone_number', phone)
-    //     fData.append('message', message)
-
-    //     axios({
-    //         method: "post",
-    //         url: process.env.REACT_APP_CONTACT_API,
-    //         data: fData,
-    //         headers: {
-    //             'Content-Type':  'multipart/form-data'
-    //         }
-    //     })
-    //     .then(function (response) {
-    //         document.getElementById('submitBtn').disabled = false;
-    //         document.getElementById('submitBtn').innerHTML = 'send message';
-    //         clearInput()
-    //         //handle success
-    //         Notiflix.Report.success(
-    //             'Success',
-    //             response.data.message,
-    //             'Okay',
-    //         );
-    //     })
-    //     .catch(function (error) {
-    //         document.getElementById('submitBtn').disabled = false;
-    //         document.getElementById('submitBtn').innerHTML = 'send message';
-    //         //handle error
-    //         const { response } = error;
-    //         if(response.status === 500) {
-    //             Notiflix.Report.failure(
-    //                 'An error occurred',
-    //                 response.data.message,
-    //                 'Okay',
-    //             );
-    //         }
-    //         if(response.data.errors !== null) {
-    //             setErrors(response.data.errors)
-    //         }
-            
-    //     });
-    // }
+  function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_d82ze2f', 'template_aloxwud', e.target, 'NwypP86Fv71GM6sTO')
+      .then((result) => {
+        alert("Your message sent successfully!!");
+        clearInput(); // Reset input fields
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
 
 
     return (
@@ -110,10 +69,6 @@ const Contact = () => {
             </div>
 
      
-
-
-
-
 
 
 {/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
@@ -128,28 +83,28 @@ const Contact = () => {
 
                 
 
-                <h3 className="text-dark-green font-bold text-lg mt-6 mb-2">Responsibilities</h3>
+                <h3 className="text-dark-green font-bold text-lg mt-6 mb-2"> {t("JobDescription.Responsibilities")}</h3>
                 <ul className="list-disc ml-8">
-                    <li>Gather requirements, design, develop, test, implement and support robust and scalable end-to-end BI solutions to improve business analysis capabilities.</li>
-                    <li>Translate business needs into data models by collaborating with analysts, developers and stakeholders across the company.</li>
-                    <li>Assist in the design of data warehouses to ensure compatibility and scalability with BI solutions.</li>
-                    <li>Create meaningful data visualizations to better communicate data insights to the business teams.</li>
-                    <li>Support and train end-users for maximizing BI solutions effectiveness.</li>
-                    <li>Support and maintain existing implementations.</li>
+                    <li>{t("JobDescription.bullet1")}</li>
+                    <li>{t("JobDescription.bullet2")}</li>
+                    <li>{t("JobDescription.bullet3")}</li>
+                    <li>{t("JobDescription.bullet4")}</li>
+                    <li>{t("JobDescription.bullet5")}</li>
+                    <li>{t("JobDescription.bullet6")}</li>
                 </ul>
 
-                <h3 className="text-dark-green font-bold text-lg mt-6 mb-2">Requirements:</h3>
-                <p>Apply if you have:</p>
+                <h3 className="text-dark-green font-bold text-lg mt-6 mb-2">{t("JobDescription.Requirements")}</h3>
+               
                 <ul className="list-disc ml-8">
-                    <li>B.Sc. in Information System Engineering / Industrial Engineering or equivalent</li>
-                    <li>Proficient in SQL and Excel</li>
-                    <li>Understanding of relational database and ETL processes concepts</li>
-                    <li>Experience with data visualization tools such as Looker, Tableau, QlikView</li>
-                    <li>Excellent communication and leadership skills</li>
-                    <li>Team player</li>
-                    <li>Service-oriented</li>
-                    <li>High attention to detail</li>
-                    <li>Fast learner, team player, independent with a positive attitude and passion for data</li>
+                    <li>{t("JobDescription.bullet_1")}</li>
+                    <li>{t("JobDescription.bullet_2")}</li>
+                    <li>{t("JobDescription.bullet_3")}</li>
+                    <li>{t("JobDescription.bullet_4")}</li>
+                    <li>{t("JobDescription.bullet_5")}</li>
+                    <li>{t("JobDescription.bullet_6")}</li>
+                    <li>{t("JobDescription.bullet_7")}</li>
+                    <li>{t("JobDescription.bullet_8")}</li>
+                    <li>{t("JobDescription.bullet_9")}</li>
                 </ul>
 
             
@@ -161,7 +116,7 @@ const Contact = () => {
          
         <form onSubmit={sendEmail} className="w-6/12 ml-4">
         <div className="w-full bg-white p-8 my-4 md:px-12 rounded-2xl shadow-2xl">
-                    <h1 className="font-bold text-center text-green-900 lowerrcase text-4xl">Apply </h1>
+                    <h1 className="font-bold text-center text-green-900 lowerrcase text-4xl">{t("JobDescription.Form_header")} </h1>
                 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                     <div>
@@ -169,7 +124,7 @@ const Contact = () => {
                             name="first_name" 
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="text" 
-                            placeholder="First Name*" 
+                            placeholder={t("JobDescription.FirstName")}
                             value={firstName}
                             onChange={(e)=> setFirstName(e.target.value)}
                             onKeyUp={clearErrors}
@@ -183,7 +138,7 @@ const Contact = () => {
                             name="last_name" 
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="text" 
-                            placeholder="Last Name*"
+                            placeholder={t("JobDescription.LastName")}
                             value={lastName}
                             onChange={(e)=> setLastName(e.target.value)}
                             onKeyUp={clearErrors}
@@ -197,7 +152,7 @@ const Contact = () => {
                             name="email"
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="email" 
-                            placeholder="Email*"
+                            placeholder={t("JobDescription.Email")}
                             value={email}
                             onChange={(e)=> setEmail(e.target.value)}
                             onKeyUp={clearErrors}   
@@ -211,7 +166,7 @@ const Contact = () => {
                             name="phone_number" 
                             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="number" 
-                            placeholder="Phone*"
+                            placeholder={t("JobDescription.Phone")}
                             value={phone}
                             onChange={(e)=> setPhone(e.target.value)}
                             onKeyUp={clearErrors}
@@ -226,7 +181,7 @@ const Contact = () => {
                             name="email"
                             className="w-full bg-gray-100 text-gray-900 mt-7 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="email" 
-                            placeholder="Location (City)*"
+                            placeholder={t("JobDescription.Location(City)")}
                             value={email}
                             onChange={(e)=> setEmail(e.target.value)}
                             onKeyUp={clearErrors}   
@@ -240,7 +195,7 @@ const Contact = () => {
                             name="email"
                             className="w-full bg-gray-100 text-gray-900 mt-7 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                             type="email" 
-                            placeholder="LinkedIn Profile URL *"
+                            placeholder={t("JobDescription.Linkedin")}
                             value={email}
                             onChange={(e)=> setEmail(e.target.value)}
                             onKeyUp={clearErrors}   
@@ -254,7 +209,7 @@ const Contact = () => {
         <div className="my-4">
                     <textarea 
                         name="message" 
-                        placeholder="Tell us about yourself" 
+                        placeholder={t("JobDescription.Summery")}
                         className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                         value={message}
                         onChange={(e)=> setMessage(e.target.value)}
@@ -266,7 +221,7 @@ const Contact = () => {
                 </div>
 
                 <div className="file-input-container">
-  <label htmlFor="avatar">Upload your CV</label>
+  <label htmlFor="avatar">{t("JobDescription.FileLabel")}</label>
   <input
     type="file"
     id="avatar"
@@ -282,7 +237,7 @@ const Contact = () => {
                 
                 <div className="my-8 w-full lg:w-6/7 ml-auto">
                     <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-green-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                        Submit
+                    {t("JobDescription.SubmitButtom")}
                     </button>
                 </div>
                 </div>

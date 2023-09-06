@@ -174,11 +174,113 @@
         }
 
     }
+    ,
+    
+    "Clients":{
+      
+            "header":"OUR CLIENTS",
+            "paragraph":"Renowned clients place their trust in Grovv due to our unwavering excellence and reliability"
+          
+        },
 
- 
+    
+    
+        "Competence":{
+      
+            "header":"PRODUCTS",
+            "DMC_H":"SAP DMC",
+            "DMC_C":"SAP DMC, or Data Management Console, is a vital SAP component for streamlined data governance. It centralizes data quality monitoring, integration, and lifecycle management, enhancing consistency and informed decision-making. This tool empowers businesses to optimize data assets, ensuring integrity and compliance while driving operational efficiency.",
+            "ME_H":"SAP ME",
+            "ME_C":"SAP ME (Manufacturing Execution) serves as a crucial link between shop floor operations and business systems. By enabling real-time data exchange and process synchronization, it enhances production efficiency, quality, and agility, ultimately leading to more informed decision-making and streamlined manufacturing workflows.",
+            "MII_H":"SAP MII",
+            "MII_C":"SAP MII, or Manufacturing Integration and Intelligence, is a key SAP solution for manufacturing processes. It integrates shop floor data with business systems, enabling real-time visibility and control. This tool empowers businesses to optimize production, enhance efficiency, and make informed decisions by leveraging actionable insights from manufacturing data. SAP MII bridges the gap between the shop floor and the business, facilitating streamlined operations and improved collaboration.",
+            "Fiori_H":"SAP Fiori",
+            "Fiori_C":"SAP Fiori is a user experience (UX) design approach and a collection of applications that provide a consistent and intuitive interface across SAP software. It focuses on delivering a modern, responsive, and user-centric experience for various business processes. By simplifying and harmonizing the user interaction with SAP applications, Fiori enhances usability, productivity, and user satisfaction. The Fiori design principles are applied to a wide range of applications, spanning from analytics and workflows to transactional tasks, creating a unified and visually appealing experience for users interacting with SAP systems.",
+            "CustomComplexDevelopments_H":"Custom complex developments",
+            "CustomComplexDevelopments_C":"Elevate your software needs with our Custom Complex Developments service. From specialized applications to seamless system integration, our experienced team creates tailored solutions that tackle intricate challenges. We collaborate closely, ensuring every stage aligns with your vision. Get ready to innovate, streamline, and stand out in the digital realm.",
+            "PCO_H":"SAP PCO",
+            "PCO_C":"SAP PCo (Plant Connectivity) serves as a vital integration solution, enabling real-time data exchange between shop floor equipment and manufacturing systems. By collecting and transmitting data from diverse sources, it enhances process visibility and efficiency, supporting informed decision-making and operational optimization.",
+            "Butoom":"Read More"
+          
+          
+        }
+        ,
 
- 
-  
-   
+    "Partners":{
+      
+        "header1":"Our Partners",
+        "header2":"We collaborate with the largest companies in the industry",
+        "leftCardHeader":"Systems, Applications, and Products",
+        "leftCardContent":"SAP Company is a global leader recognized for its transformative software solutions that empower businesses by seamlessly integrating processes, data, and resources, driving operational excellence, and fostering innovation across industries.",
+        "rightCardHeader":"Art of Automation",
+        "rightCardContent":"Systema Company stands as a pioneering technology firm, renowned for its cutting-edge software solutions that revolutionize and optimize various aspects of business operations, ultimately empowering organizations to achieve higher levels of efficiency, productivity, and success.",
+        "footerHeader1":"We",
+        "footerHeader2":"Collaborate",
+        "footerContent":"We can collaborate with your existing tech team to scale existing software applications or design customized software applications that suits your everyday need and simplifies various processes."
+    },
+
+    "JobDescription":{
+        "Responsibilities":"Responsibilities",
+        "bullet1":"Gather requirements, design, develop, test, implement and support robust and scalable end-to-end BI solutions to improve business analysis capabilities.",
+        "bullet2":"Translate business needs into data models by collaborating with analysts, developers and stakeholders across the company.",
+        "bullet3":"Assist in the design of data warehouses to ensure compatibility and scalability with BI solutions.",
+        "bullet4":"Create meaningful data visualizations to better communicate data insights to the business teams",
+        "bullet5":"Support and train end-users for maximizing BI solutions effectiveness",
+        "bullet6":"Support and maintain existing implementations",
+        "Requirements":"Our Partners",
+        "bullet_1":"B.Sc. in Information System Engineering / Industrial Engineering or equivalent",
+        "bullet_2":"Proficient in SQL and Excel",
+        "bullet_3":"Understanding of relational database and ETL processes concepts",
+        "bullet_4":"Experience with data visualization tools such as Looker, Tableau, QlikView",
+        "bullet_5":"Excellent communication and leadership skills",
+        "bullet_6":"Team player",
+        "bullet_7":"Service-oriented",
+        "bullet_8":"High attention to detail",
+        "bullet_9":"Fast learner, team player, independent with a positive attitude and passion for data",
+        "Form_header":"Apply",
+        "FirstName":"First Name",
+        "LastName":"Last Name",
+        "Email":"Email",
+        "Phone":"Phone",
+        "Location(City)":"Location(City)",
+        "Linkedin":"Linkedin Profile URL",
+        "Summery":"Tell us about yourself",
+        "FileLabel":"Upload your CV",
+        "FileButtom":"Choose File",
+        "SubmitButtom":"SUBMIT"
+
+
+    },
+    "Careers":{
+        "header1":"Why Should You Work With Us?",
+        "header2":"We have a lot to offer to our team members. Here are a few reasons why you'll love working with us:",
+
+        "Bubble1Header":"Exciting Opportunities",
+        "Bubble1Content":"Join a dynamic team and work on challenging projects that will help you grow professionally.",
+        "Bubble2Header":"Collaborative Environment",
+        "Bubble2Content":"Be part of a supportive and collaborative work culture that values teamwork and creativity.",
+        "Bubble3Header":"Learning Opportunities",
+        "Bubble3Content":"Access to continuous learning and professional development resources to enhance your skills.",
+        "Bubble4Header":"Employee Well-being",
+        "Bubble4Content":"We prioritize the well-being of our employees, offering flexible work arrangements and more.",
+
+        "CTAheader":"Forge your path in tech alongside us",
+        "CTAContent":"where collaboration breeds excellence, and your career accelerates amidst exciting challenges.",
+
+        "CardsTtile":"Explore Job Opportunities",
+        "LeftCardHeader":"SQL Developer",
+        "LeftCardContent":"Join our team as an SQL Developer and work on building, maintaining, and optimizing our database systems. Collaborate with cross-functional teams to design and implement efficient SQL queries and database solutions.",
+        "LeftCardLevel":"ENTRY LEVEL",
+        "buttomLeft":"Apply Now",
+        "RightCardHeader":"Project Manager",
+        "RightCardContent":"We're seeking a dedicated Project Manager to lead and oversee various projects from initiation to completion. Collaborate with stakeholders, manage resources, and ensure successful project delivery while adhering to timelines.",
+        "RightCardLevel":"MID - SENIOR"        
+        
+
+    }
+
+
+
+     
 
 }
