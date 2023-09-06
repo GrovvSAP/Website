@@ -33,7 +33,7 @@ const Contact = () => {
     setIsLoading(false);
   }, [isRTL, i18n]);
 
-  
+
   if (isLoading) {
     return <div></div>;
   }
@@ -106,7 +106,7 @@ const Contact = () => {
                 </div>
                 <i className="fas fa-cogs text-3xl text-green-500 mb-3"></i>
                 <h3 className="text-lg font-semibold mb-2 text-xl">{t("Careers.RightCardHeader")}</h3>
-                <p className="text-gray-700 text-center max-w-xs text-lg">{t("Careers.RightCardHeader")}</p>
+                <p className="text-gray-700 text-center max-w-xs text-lg">{t("Careers.RightCardContent")}</p>
                 <a href="/jobPosition" className="mt-4 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300 text-base">{t("Careers.buttomLeft")}</a>
             </div>
         </div>

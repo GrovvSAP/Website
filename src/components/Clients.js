@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import Barkan from '../images/clients/Barkan.png';
 import Mekorot from '../images/clients/Mekorot.png';
@@ -8,6 +8,8 @@ import PCB from '../images/clients/PCB.png';
 import Moog from '../images/clients/Moog.png';
 import Nilit from '../images/clients/Nilit.png';
 import sap from '../images/clients/sap.png';
+import { useTranslation } from 'react-i18next';
+import React, { useEffect, useState } from 'react';
 
 const clientImage = {
     height: '10rem',
@@ -16,11 +18,33 @@ const clientImage = {
 }
 
 const Clients = () => {
+    const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    setIsLoading(false);
+  }, [isRTL, i18n]);
+
     return (
         <div className="mt-8 bg-gray-100">
             <section data-aos="fade-up">
                 <div className="my-4 py-4">
-                        <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold">Our Clients</h2>
+                        <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold">{t("Clients.header")}</h2>
                         <div className='flex justify-center'>
                             <div className='w-24 border-b-4 border-green-900'></div>
                         </div>

@@ -1,17 +1,39 @@
-import React from 'react';
-import img from '../images/web.svg'; 
+import React, { useEffect, useState } from 'react';
+import img from '../images/web.svg';
 import img2 from '../images/app.svg';
 import img3 from '../images/hosting.svg';
 import img4 from '../images/consultation.svg';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    setIsLoading(false);
+  }, [isRTL, i18n]);
 
     return (
         <div id="services" className="bg-gray-100 py-12">
         <section data-aos="zoom-in-down">
           <div className="my-4 py-4 text-center">
             <h2 className="my-2 text-3xl text-green-900 uppercase font-bold">
-              services
+            {t("Services.PageHeader.header")}
             </h2>
   
 
@@ -21,7 +43,7 @@ const Services = () => {
                             
                             <div className='w-24 border-b-4 border-green-900'></div>
                         </div>
-                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-green-900">We are deeply committed to the growth and success of our clients.</h2>
+                        <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-green-900">{t("Services.PageHeader.paragraph")}</h2>
                     </div>
                     
 
@@ -31,9 +53,9 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Specification</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center">{t("Services.Specification.Specification_header")}</h2>
                                     <p className="text-md font-medium">
-                                        We specialize in creating and optimizing high-quality, custom websites for businesses and organizations of all sizes. Building mobile-friendly and easy-to-use websites and applications for clients.
+                                    {t("Services.Specification.Specification_paragraph")}
                                     </p>
                                 </div>
                             </div>
@@ -41,9 +63,9 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center">Process Analysess</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center">{t("Services.ProcessAnalysess.ProcessAnalysess_header")}</h2>
                                     <p className="text-md font-medium">
-                                        We develop high-quality, custom cross-platform mobile applications that are robust and optimized for performance, scalability, and accessibility.
+                                    {t("Services.ProcessAnalysess.ProcessAnalysess_paragraph")}
                                     </p>
                                 </div>
                             </div>
@@ -51,9 +73,9 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                     <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">System Implementaion</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.SystemImplementaion.SystemImplementaion_header")}</h2>
                                     <p className="text-md font-medium">
-                                        We provide domain registration and web hosting services to individuals and organizations to enable them gain visibility in the digital space.
+                                    {t("Services.SystemImplementaion.SystemImplementaion_paragraph")}
                                     </p>
                                 </div>
                             </div>
@@ -61,9 +83,9 @@ const Services = () => {
                             <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                                 <div className="m-2 text-justify text-sm">
                                 <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
-                                    <h2 className="font-semibold my-4 text-2xl text-center ">User & Acceptance tests</h2>
+                                    <h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.User&AcceptanceTests.User&AcceptanceTests_header")}</h2>
                                     <p className="text-md font-medium">
-                                        Our IT consultations service provides expert guidance and support for businesses and individuals looking to optimize their technology solutions.
+                                    {t("Services.User&AcceptanceTests.User&AcceptanceTests_paragraph")}
                                     </p>
                                 </div>
                             </div>                    
