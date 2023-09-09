@@ -8,6 +8,25 @@
 .dir-rtl {
   direction: rtl;
 }
+/* Add these styles to your CSS file */
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+/* For LTR (Left-to-Right) text */
+.text-ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* For RTL (Right-to-Left) text */
+.text-rtl {
+  direction: rtl;
+  text-align: right;
+}
 
 
 

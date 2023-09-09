@@ -46,7 +46,7 @@ const NavLinks = () => {
   if (isLoading) {
     return <div></div>;
   }
-
+  // console.log('isRTL:', isRTL);
     return (
         <>
         
