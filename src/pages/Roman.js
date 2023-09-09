@@ -118,6 +118,7 @@ const Contact = () => {
                         <div className='text-85CD40 mb-4'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" className='fill-current'><path d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"></path></svg>
                         </div>
+                        {/* /the content here should be from right to left when in hebrew language. in english its alrady working fine- from left to write. */}
                         <h3 className="text-3xl  text-85CD40 font-bold">{t("Partners.footerHeader1")} <span>  {t("Partners.footerHeader2")}</span></h3>
                         <div>
                             <p className='my-3 text-xl text-gray-600 font-semibold'>  {t("Partners.footerContent")}</p>

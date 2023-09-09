@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
 import heroImg from '../images/web-dev.svg';
@@ -11,7 +10,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   // Initialize language and content direction based on sessionStorage
-  const initialLanguage = useMemo(() => localStorage.getItem('language') || 'en', []);
+  const initialLanguage = sessionStorage.getItem('language') || 'en';
   const initialIsRTL = initialLanguage === 'he';
 
   const [isRTL, setIsRTL] = useState(initialIsRTL);
@@ -44,25 +43,8 @@ const Hero = () => {
     return <div></div>;
   }
 
- 
-  let textAlignmentClass;
-  if (initialLanguage=="en") {
-     textAlignmentClass='text-left'
-  } else {
-     textAlignmentClass='text-right'
-  }
-
-
-//   const textAlignmentClass = isRTL ? 'text-right' : 'text-left';
-
-
-
-
-
-console.log('isRTL:', isRTL);
-
-
-
+  // Define a CSS class to set text-align based on language direction
+  const textAlignmentClass = isRTL ? 'text-right' : 'text-left';
 
   return (
     <div className="hero" id="hero">
