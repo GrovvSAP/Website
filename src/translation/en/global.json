@@ -93,11 +93,19 @@
         },
 
         "Pagefooter":{
-            "header1":"We",
+            "header":"We",
             "header2":"Build",
 
             "paragraph":"With over 10 years experience in software analysis and design and a deep understanding of the latest IT trends and solutions, we provide customized recommendations and strategies to help you improve your operations, reduce costs, and increase efficiency."
           
+        
+        },
+        "Pagefooter_homepage":{
+            "header":"We",
+            "header2":"Provide Solutions",
+
+            "paragraph":"Leveraging years of experience in SAP technologies, we specialize in crafting tailored solutions that harness the power of SAP's suite of enterprise software. From intricate implementations to seamless integrations, we optimize your business processes and drive growth with SAP at the core.",
+            "buttom":"See all Servies"
         
         }
       
@@ -200,7 +208,11 @@
             "CustomComplexDevelopments_C":"Elevate your software needs with our Custom Complex Developments service. From specialized applications to seamless system integration, our experienced team creates tailored solutions that tackle intricate challenges. We collaborate closely, ensuring every stage aligns with your vision. Get ready to innovate, streamline, and stand out in the digital realm.",
             "PCO_H":"SAP PCO",
             "PCO_C":"SAP PCo (Plant Connectivity) serves as a vital integration solution, enabling real-time data exchange between shop floor equipment and manufacturing systems. By collecting and transmitting data from diverse sources, it enhances process visibility and efficiency, supporting informed decision-making and operational optimization.",
-            "Butoom":"Read More"
+            "Butoom":"Read More",
+            "Butoom2":"All Products"
+
+
+
           
           
         }
@@ -277,7 +289,16 @@
         "RightCardLevel":"MID - SENIOR"        
         
 
+    },
+
+    "CTA":{
+        "header1":"Why sohuld you choose working with us?G",
+        "header2":"Our company has an uncompromising reputation for excellence, our work speaks for itself",
+        "buttom":"Contact us"
+
+
     }
+
 
 
 

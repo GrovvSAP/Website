@@ -1,11 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { HashLink } from 'react-router-hash-link';
+
+ // language toggle button////
+import { useTranslation } from 'react-i18next';
+
+
+
+
+
+
+
 import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
+  const [t, i18n] = useTranslation("global");
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Initialize language and content direction based on local storage
+  const initialLanguage = localStorage.getItem('language') || 'en';
+  const initialIsRTL = initialLanguage === 'he';
+
+  const [isRTL, setIsRTL] = useState(initialIsRTL);
+
+  useEffect(() => {
+    const lang = isRTL ? 'he' : 'en';
+    i18n.changeLanguage(lang);
+    localStorage.setItem('language', lang);
+
+    // Update the content direction based on the language
+    if (isRTL) {
+      document.body.classList.remove('dir-ltr');
+      document.body.classList.add('dir-rtl');
+    } else {
+      document.body.classList.remove('dir-rtl');
+      document.body.classList.add('dir-ltr');
+    }
+
+    // Mark loading as complete
+    setIsLoading(false);
+  }, [isRTL, i18n]);
+
+  // Toggle language and content direction
+  const handleToggle = () => {
+    setIsRTL(prevIsRTL => !prevIsRTL);
+  };
+
+  // Render loading screen while isLoading is true
+  if (isLoading) {
+    return <div></div>;
+  }
+
     return (
         <>
             <div className="my-4 py-4" id='portfolio'>
-                <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold">Products</h2>
+                <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold">{t("Competence.header")}</h2>
                 <div className='flex justify-center'>
                     <div className='w-24 border-b-4 border-green-900 mb-8'></div>
                 </div>
@@ -14,9 +63,9 @@ const Portfolio = () => {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">                            
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3 min-h-max">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP DMC</h4>
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12"> {t("Competence.DMC_H")}</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                SAP DMC, or Data Management Console, is a vital SAP component for streamlined data governance. It centralizes data quality monitoring, integration, and lifecycle management, enhancing consistency and informed decision-making. This tool empowers businesses to optimize data assets, ensuring integrity and compliance while driving operational efficiency.
+                                {t("Competence.DMC_C")}
                                 </p>
                                 <div className="flex justify-center my-4">
       <a
@@ -25,7 +74,7 @@ const Portfolio = () => {
         rel="noopener noreferrer"
         className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
       >
-        Read More 
+       {t("Competence.Butoom")}
         <svg
           className="w-4 h-4 ml-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,9 +94,9 @@ const Portfolio = () => {
 
                         <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP ME</h4>
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">{t("Competence.ME_H")}</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                SAP ME (Manufacturing Execution) serves as a crucial link between shop floor operations and business systems. By enabling real-time data exchange and process synchronization, it enhances production efficiency, quality, and agility, ultimately leading to more informed decision-making and streamlined manufacturing workflows.
+                                {t("Competence.MII_C")}
                                 </p>
                                 <div className="flex justify-center my-4">
       <a
@@ -56,7 +105,7 @@ const Portfolio = () => {
         rel="noopener noreferrer"
         className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
       >
-        Read More 
+       {t("Competence.Butoom")}
         <svg
           className="w-4 h-4 ml-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -87,9 +136,9 @@ const Portfolio = () => {
 
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                            <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP MII</h4>
+                            <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">{t("Competence.MII_H")}</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                SAP MII, or Manufacturing Integration and Intelligence, is a key SAP solution for manufacturing processes. It integrates shop floor data with business systems, enabling real-time visibility and control. This tool empowers businesses to optimize production, enhance efficiency, and make informed decisions by leveraging actionable insights from manufacturing data. SAP MII bridges the gap between the shop floor and the business, facilitating streamlined operations and improved collaboration.
+                                {t("Competence.MII_C")}
                                 </p>
                                 <div className="flex justify-center my-4">
       <a
@@ -98,7 +147,7 @@ const Portfolio = () => {
         rel="noopener noreferrer"
         className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
       >
-        Read More 
+       {t("Competence.Butoom")}
         <svg
           className="w-4 h-4 ml-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -118,9 +167,9 @@ const Portfolio = () => {
 
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">SAP Fiori</h4>
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12"> {t("Competence.Fiori_H")}</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                SAP Fiori is a user experience (UX) design approach and a collection of applications that provide a consistent and intuitive interface across SAP software. It focuses on delivering a modern, responsive, and user-centric experience for various business processes. By simplifying and harmonizing the user interaction with SAP applications, Fiori enhances usability, productivity, and user satisfaction. The Fiori design principles are applied to a wide range of applications, spanning from analytics and workflows to transactional tasks, creating a unified and visually appealing experience for users interacting with SAP systems.
+                                {t("Competence.Fiori_C")}
                                 </p>
                                 <div className="flex justify-center my-4">
       <a
@@ -129,7 +178,7 @@ const Portfolio = () => {
         rel="noopener noreferrer"
         className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
       >
-        Read More 
+       {t("Competence.Butoom")}
         <svg
           className="w-4 h-4 ml-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -160,8 +209,8 @@ const Portfolio = () => {
     rel="noopener noreferrer"
     className="text-white bg-green-500 hover:bg-green-800 inline-flex items-center justify-center mx-auto w-auto px-4 py-3 my-4 text-lg shadow-xl rounded-xl"
   >
-    See all products
-    <svg
+    {t("Competence.Butoom2")}
+    {/* <svg
       className="w-4 h-4 ml-1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
@@ -172,7 +221,7 @@ const Portfolio = () => {
         d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
         clipRule="evenodd"
       ></path>
-    </svg>
+    </svg> */}
   </a>
 </div>
 
