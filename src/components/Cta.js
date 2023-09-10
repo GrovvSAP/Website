@@ -12,49 +12,32 @@ import { useTranslation } from 'react-i18next';
 
 
 const Cta = () => {
-    const [t, i18n] = useTranslation("global");
-    const [isLoading, setIsLoading] = useState(true);
-  
-    // Initialize language and content direction based on local storage
-    const initialLanguage = localStorage.getItem('language') || 'en';
-    const initialIsRTL = initialLanguage === 'he';
-  
-    const [isRTL, setIsRTL] = useState(initialIsRTL);
-  
-    useEffect(() => {
-      const lang = isRTL ? 'he' : 'en';
-      i18n.changeLanguage(lang);
-      localStorage.setItem('language', lang);
-  
-      // Update the content direction based on the language
-      if (isRTL) {
-        document.body.classList.remove('dir-ltr');
-        document.body.classList.add('dir-rtl');
-      } else {
-        document.body.classList.remove('dir-rtl');
-        document.body.classList.add('dir-ltr');
-      }
-  
-      // Mark loading as complete
-      setIsLoading(false);
-    }, [isRTL, i18n]);
-  
-    // Toggle language and content direction
-    const handleToggle = () => {
-      setIsRTL(prevIsRTL => !prevIsRTL);
-    };
-  
-    // Render loading screen while isLoading is true
-    if (isLoading) {
-      return <div></div>;
-    }
+  const [t, i18n] = useTranslation('global');
+  const [isLoading, setIsLoading] = useState(true);
+
+  const isRTL = i18n.language === 'en';
+
+  useEffect(() => {
+    // Mark loading as complete
+    setIsLoading(false);
+  }, [isRTL, i18n]);
+
+
+  <p className={`my-3 text-xl text-gray-600 font-semibold `}></p>
+ 
+
+  // Render loading screen while isLoading is true
+  if (isLoading) {
+    return <div></div>;
+  }
     return ( 
         <div className="w-full flex items-center justify-center text-white cta">
             <div className="mx-8 w-full h-96 text-center lg:text-left py-16 px-12 flex lg:justify-between items-center">                    
                 <div className="w-full flex flex-col lg:flex-row lg:justify-around">
                     <div className="mb-4">
-                        <p className='text-2xl md:text-4xl font-bold mb-4'>{t("CTA.header1")}</p>
-                        <p className="text-lg md:text-2xl">{t("CTA.header2")} <span className='font-black'></span></p>
+                        <p className={`text-2xl md:text-4xl font-bold mb-4 ${isRTL ? 'text-left' : 'lg:text-right'}`}>{t("CTA.header1")}</p>
+                        
+                        <p className={`text-lg md:text-2xl ${isRTL ? 'text-left' : 'lg:text-right'}`}>{t("CTA.header2")} <span className='font-black'></span></p>
                     </div>
                     
                     <div className="w-full lg:w-72 pt-6 lg:mx-12">

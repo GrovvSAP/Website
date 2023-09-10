@@ -10,6 +10,7 @@ const Intro = () => {
 
 // language toggle button////
     const[t, i18n] = useTranslation("global");
+    const isRTL = i18n.language === 'en';
     const func = (lang)=>{
 
         i18n.changeLanguage(lang);
@@ -33,21 +34,31 @@ const Intro = () => {
 
                         <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h3 className="text-3xl  text-green-900 font-bold"> {t("hero2.header")}</h3>
+                            <h3 className={`text-3xl  text-green-900 font-bold ${isRTL ? 'text-left' : 'lg:text-right'} `}> {t("hero2.header")}</h3>
                             <div>
-                                <p className='my-3 text-xl text-gray-600 font-semibold'>{t("hero2.paragraph")}</p>
+                                <p className={`my-3 text-xl text-gray-600 font-semibold ${isRTL ? 'text-left' : 'lg:text-right'} `}>{t("hero2.paragraph")}</p>
                             </div>
                             
                             <div>
-                                <p className='my-3 text-xl text-gray-600 font-semibold'>{t("hero2.paragraph2")}</p>
+                                <p className={`my-3 text-xl text-gray-600 font-semibold ${isRTL ? 'text-left' : 'lg:text-right'} `}>{t("hero2.paragraph2")}</p>
                             </div>
+                            <div className={`mb-4 space-x-0 md:space-x-2 md:mb-8 ${isRTL ? 'text-left' : 'lg:text-right'} `}>
                             <Link to="/contact" className="text-white bg-green-900 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-2 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0 group">
                             {t("hero2.button")}
-                                <svg className="w-4 h-4 ml-1 group-hover: translate-x-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                            <svg className={`w-4 h-4 ml-1 ${isRTL ? 'transform scale-x-[1]' : 'lg:transform scale-x-[-1]'} `} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                </svg>
                             </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
+                
+              
+            
         </>
     )
 }
