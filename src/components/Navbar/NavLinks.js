@@ -42,11 +42,15 @@ const NavLinks = () => {
     setIsRTL(prevIsRTL => !prevIsRTL);
   };
 
+  const navigationContainerStyle = {
+    direction: 'ltr', // Set the direction to left-to-right (or 'rtl' for right-to-left)
+  };
+
   // Render loading screen while isLoading is true
   if (isLoading) {
     return <div></div>;
   }
-  // console.log('isRTL:', isRTL);
+  
     return (
         <>
         
@@ -54,6 +58,9 @@ const NavLinks = () => {
             {/* <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/#about">
                 About Grovv
             </HashLink> */}
+            <div style={navigationContainerStyle} >
+
+            
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/yaniv">
                 {t("header.About")}
             </HashLink>
@@ -75,6 +82,7 @@ const NavLinks = () => {
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/careers">
                 {t("header.Careers")}
             </HashLink>
+            </div>
 
 
 {/*     "header" :{
@@ -98,8 +106,8 @@ const NavLinks = () => {
           onChange={handleToggle}
         />
         <label htmlFor="language-toggle"></label>
-        <span className="on">HE</span>
-        <span className="off">EN</span>
+        <span className="on">EN</span>
+        <span className="off">HE</span>
       </div>
       </div>
         </>
