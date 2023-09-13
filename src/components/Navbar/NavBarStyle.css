@@ -1,0 +1,16 @@
+/* NavBarStyle.css */
+
+/* Default size for larger screens */
+.logo {
+    width: 40%; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  /* Smaller size for screens with a maximum width of 768px */
+  @media screen and (max-width: 768px) {
+    .logo {
+      width: 100%; /* Adjust the width for smaller screens */
+      height: auto;
+    }
+  }
+  

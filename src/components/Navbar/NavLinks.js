@@ -4,14 +4,17 @@ import { HashLink } from 'react-router-hash-link';
 import img from '../../images/logotrasnparent.png'; 
  // language toggle button////
 import { useTranslation } from 'react-i18next';
-
+import './NavBarStyle.css';
 
 
 
 
 const NavLinks = () => {
+  
   const [t, i18n] = useTranslation("global");
   const [isLoading, setIsLoading] = useState(true);
+  //responsive 
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Initialize language and content direction based on local storage
   const initialLanguage = localStorage.getItem('language') || 'en';
@@ -50,52 +53,44 @@ const NavLinks = () => {
   if (isLoading) {
     return <div></div>;
   }
+
+
+ 
   
     return (
         <>
         
         <div style={{ display: 'flex', alignItems: 'center' }}>
-            {/* <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/#about">
-                About Grovv
-            </HashLink> */}
+    
             <div style={navigationContainerStyle} >
 
-            
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  smooth to="/yaniv">
+     
+      
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/yaniv">
                 {t("header.About")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  smooth to="/Services">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/Services">
                 {t("header.Services")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  smooth to="/Competence">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/Competence">
                 {t("header.Competence")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"   to="/roman">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }}  to="/roman">
                 {t("header.Partners")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/clients2">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/clients2">
                 {t("header.Costumers")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/contact">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/contact">
                 {t("header.Contact")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/careers">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/careers">
                 {t("header.Careers")}
             </HashLink>
             </div>
 
 
             
-
-
-     
-
-
-
-
-
-
-
 
 <div className={`switch ${isRTL ? 'rtl' : 'ltr'}`}>
         <input
