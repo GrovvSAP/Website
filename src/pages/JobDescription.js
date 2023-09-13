@@ -64,196 +64,96 @@ const Contact = () => {
 
     return (
         <>
-            <div>
-                <NavBar />
-            </div>
-
-     
-
-
-{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
-
-<div className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24 bg-gray-200">
-    <div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
-        <div className="flex space-x-12">
-            <div className="w-7/12">
-                
-
-                
-
-                
-
-                <h3 className="text-dark-green font-bold text-lg mt-6 mb-2"> {t("JobDescription.Responsibilities")}</h3>
-                <ul className="list-disc ml-8">
-                    <li>{t("JobDescription.bullet1")}</li>
-                    <li>{t("JobDescription.bullet2")}</li>
-                    <li>{t("JobDescription.bullet3")}</li>
-                    <li>{t("JobDescription.bullet4")}</li>
-                    <li>{t("JobDescription.bullet5")}</li>
-                    <li>{t("JobDescription.bullet6")}</li>
-                </ul>
-
-                <h3 className="text-dark-green font-bold text-lg mt-6 mb-2">{t("JobDescription.Requirements")}</h3>
-               
-                <ul className="list-disc ml-8">
-                    <li>{t("JobDescription.bullet_1")}</li>
-                    <li>{t("JobDescription.bullet_2")}</li>
-                    <li>{t("JobDescription.bullet_3")}</li>
-                    <li>{t("JobDescription.bullet_4")}</li>
-                    <li>{t("JobDescription.bullet_5")}</li>
-                    <li>{t("JobDescription.bullet_6")}</li>
-                    <li>{t("JobDescription.bullet_7")}</li>
-                    <li>{t("JobDescription.bullet_8")}</li>
-                    <li>{t("JobDescription.bullet_9")}</li>
-                </ul>
-
-            
-
-            </div>
-{/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */}
-
-
-         
-        <form onSubmit={sendEmail} className="w-6/12 ml-4">
-        <div className="w-full bg-white p-8 my-4 md:px-12 rounded-2xl shadow-2xl">
-                    <h1 className="font-bold text-center text-green-900 lowerrcase text-4xl">{t("JobDescription.Form_header")} </h1>
-                
-                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
-                    <div>
-                        <input 
-                            name="first_name" 
-                            className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" 
-                            placeholder={t("JobDescription.FirstName")}
-                            value={firstName}
-                            onChange={(e)=> setFirstName(e.target.value)}
-                            onKeyUp={clearErrors}
-                        />
-                        {errors && 
-                            <p className="text-red-500 text-sm">{errors.first_name}</p>
+	<div>
+		<NavBar/>
+	</div>
+	<div className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24 bg-gray-200">
+		<div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
+			<div className="flex space-x-12">
+				<div className="w-7/12">
+					<h3 className="text-custom-color2 font-bold text-lg mt-6 mb-2"> {t("JobDescription.Responsibilities")}</h3>
+					<ul className="list-disc ml-8">
+						<li>{t("JobDescription.bullet1")}</li>
+						<li>{t("JobDescription.bullet2")}</li>
+						<li>{t("JobDescription.bullet3")}</li>
+						<li>{t("JobDescription.bullet4")}</li>
+						<li>{t("JobDescription.bullet5")}</li>
+						<li>{t("JobDescription.bullet6")}</li>
+					</ul>
+					<h3 className="text-custom-color2 font-bold text-lg mt-6 mb-2">{t("JobDescription.Requirements")}</h3>
+					<ul className="list-disc ml-8">
+						<li>{t("JobDescription.bullet_1")}</li>
+						<li>{t("JobDescription.bullet_2")}</li>
+						<li>{t("JobDescription.bullet_3")}</li>
+						<li>{t("JobDescription.bullet_4")}</li>
+						<li>{t("JobDescription.bullet_5")}</li>
+						<li>{t("JobDescription.bullet_6")}</li>
+						<li>{t("JobDescription.bullet_7")}</li>
+						<li>{t("JobDescription.bullet_8")}</li>
+						<li>{t("JobDescription.bullet_9")}</li>
+					</ul>
+				</div>
+				<form onSubmit={sendEmail} className="w-6/12 ml-4">
+					<div className="w-full bg-white p-8 my-4 md:px-12 rounded-2xl shadow-2xl">
+						<h1 className="font-bold text-center text-custom-color2 lowerrcase text-4xl">{t("JobDescription.Form_header")} </h1>
+						<div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+							<div>
+								<input name="first_name" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder={t("JobDescription.FirstName" )} value={firstName} onChange={(e)=> setFirstName(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+								<p className="text-red-500 text-sm">{errors.first_name}</p>
                         }
                     </div>
-                    <div>
-                        <input 
-                            name="last_name" 
-                            className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text" 
-                            placeholder={t("JobDescription.LastName")}
-                            value={lastName}
-                            onChange={(e)=> setLastName(e.target.value)}
-                            onKeyUp={clearErrors}
-                        />
-                        {errors && 
-                            <p className="text-red-500 text-sm">{errors.last_name}</p>
+							<div>
+								<input name="last_name" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" placeholder={t("JobDescription.LastName" )} value={lastName} onChange={(e)=> setLastName(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+								<p className="text-red-500 text-sm">{errors.last_name}</p>
                         }
                     </div>
-                    <div>
-                        <input 
-                            name="email"
-                            className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="email" 
-                            placeholder={t("JobDescription.Email")}
-                            value={email}
-                            onChange={(e)=> setEmail(e.target.value)}
-                            onKeyUp={clearErrors}   
-                        />
-                        {errors && 
-                            <p className="text-red-500 text-sm">{errors.email}</p>
+							<div>
+								<input name="email" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="email" placeholder={t("JobDescription.Email" )} value={email} onChange={(e)=> setEmail(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+								<p className="text-red-500 text-sm">{errors.email}</p>
                         }
                     </div>
-                    <div>
-                        <input
-                            name="phone_number" 
-                            className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="number" 
-                            placeholder={t("JobDescription.Phone")}
-                            value={phone}
-                            onChange={(e)=> setPhone(e.target.value)}
-                            onKeyUp={clearErrors}
-                        />
-                        {errors && 
-                            <p className="text-red-500 text-sm">{errors.phone_number}</p>
+							<div>
+								<input name="phone_number" className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" placeholder={t("JobDescription.Phone" )} value={phone} onChange={(e)=> setPhone(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+								<p className="text-red-500 text-sm">{errors.phone_number}</p>
                         }
                     </div>
-                </div>
-                    <div>
-                        <input 
-                            name="email"
-                            className="w-full bg-gray-100 text-gray-900 mt-7 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="email" 
-                            placeholder={t("JobDescription.Location(City)")}
-                            value={email}
-                            onChange={(e)=> setEmail(e.target.value)}
-                            onKeyUp={clearErrors}   
-                        />
-                        {errors && 
-                            <p className="text-red-500 text-sm">{errors.email}</p>
+						</div>
+						<div>
+							<input name="email" className="w-full bg-gray-100 text-gray-900 mt-7 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="email" placeholder={t("JobDescription.Location(City)" )} value={email} onChange={(e)=> setEmail(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+							<p className="text-red-500 text-sm">{errors.email}</p>
                         }
                     </div>
-                    <div>
-                        <input 
-                            name="email"
-                            className="w-full bg-gray-100 text-gray-900 mt-7 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="email" 
-                            placeholder={t("JobDescription.Linkedin")}
-                            value={email}
-                            onChange={(e)=> setEmail(e.target.value)}
-                            onKeyUp={clearErrors}   
-                        />
-                        {errors && 
-                            <p className="text-red-500 text-sm">{errors.email}</p>
+						<div>
+							<input name="email" className="w-full bg-gray-100 text-gray-900 mt-7 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="email" placeholder={t("JobDescription.Linkedin" )} value={email} onChange={(e)=> setEmail(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+							<p className="text-red-500 text-sm">{errors.email}</p>
                         }
                     </div>
-
-
-        <div className="my-4">
-                    <textarea 
-                        name="message" 
-                        placeholder={t("JobDescription.Summery")}
-                        className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                        value={message}
-                        onChange={(e)=> setMessage(e.target.value)}
-                        onKeyUp={clearErrors}
-                    ></textarea>
-                    {errors && 
-                        <p className="text-red-500 text-sm">{errors.message}</p>
+						<div className="my-4">
+							<textarea name="message" placeholder={t("JobDescription.Summery" )} className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" value={message} onChange={(e)=> setMessage(e.target.value)} onKeyUp={clearErrors}/> {errors &&
+							<p className="text-red-500 text-sm">{errors.message}</p>
                     }
                 </div>
-
-                <div className="file-input-container">
-  <label htmlFor="avatar">{t("JobDescription.FileLabel")}</label>
-  <input
-    type="file"
-    id="avatar"
-    name="avatar"
-    accept=".png, .jpeg, .jpg, .pdf, .doc, .docx"
-
-  />
-</div>
-
-
-
-
-                
-                <div className="my-8 w-full lg:w-6/7 ml-auto">
-                    <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-green-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+						<div className="file-input-container">
+							<label htmlFor="avatar">{t("JobDescription.FileLabel")}</label>
+							<input type="file" id="avatar" name="avatar" accept=".png, .jpeg, .jpg, .pdf, .doc, .docx"/>
+						</div>
+						<div className="my-8 w-full lg:w-6/7 ml-auto">
+							<button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-custom-bg-color2 hover:bg-green-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                     {t("JobDescription.SubmitButtom")}
                     </button>
-                </div>
-                </div>
-
-                </form>
-
-                </div>
-            </div>
-             </div>
-            {/* BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB */}
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+           
             
        
 
 
-            <Footer />
-        </>
+            <Footer/>
+</>
 
 
     )

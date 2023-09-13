@@ -44,7 +44,7 @@ const Clients = () => {
         <div className="mt-8 bg-gray-100">
             <section data-aos="fade-up">
                 <div className="my-4 py-4">
-                        <h2 className="my-2 text-center text-3xl text-green-900 uppercase font-bold">{t("Clients.header")}</h2>
+                        <h2 className=" my-2 text-center text-3xl text-custom-color2 uppercase font-bold">{t("Clients.header")}</h2>
                         <div className='flex justify-center'>
                             <div className='w-24 border-b-4 border-green-900'></div>
                         </div>

@@ -50,12 +50,12 @@ const Contact = () => {
         <section data-aos="zoom-in-down">
             
                 <div className="my-4 py-4">
-                    <h2 className="my-2 text-center text-3xl text-85CD40 uppercase font-bold">{t("Partners.header1")}</h2>
+                    <h2 className="my-2 text-center text-3xl text-custom-color2 uppercase font-bold">{t("Partners.header1")}</h2>
                     
                     <div className='flex justify-center'>
                         <div className='w-24 border-b-4 border-85CD40'></div>
                     </div>
-                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-85CD40">{t("Partners.header2")}</h2>
+                    <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-custom-color2">{t("Partners.header2")}</h2>
                 </div>
 
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
@@ -101,11 +101,11 @@ const Contact = () => {
                         </div>
                     </div> */}
                     <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
-                        <div className='text-85CD40 mb-4'>
+                        <div className='text-custom-color2 mb-4'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" className='fill-current'><path d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"></path></svg>
                         </div>
                         {/* /the content here should be from right to left when in hebrew language. in english its alrady working fine- from left to write. */}
-                        <h3 className={`text-3xl  text-85CD40 font-bold ${isRTL ? 'text-left' : 'lg:text-right'} `}>{t("Partners.footerHeader1")} <span>  {t("Partners.footerHeader2")}</span></h3>
+                        <h3 className={`text-3xl  text-custom-color2 font-bold ${isRTL ? 'text-left' : 'lg:text-right'} `}>{t("Partners.footerHeader1")} <span>  {t("Partners.footerHeader2")}</span></h3>
                         <div>
                             <p className={`my-3 text-xl text-gray-600 font-semibold ${isRTL ? 'text-left' : 'lg:text-right'} `}>  {t("Partners.footerContent")}</p>
                         </div>

@@ -196,7 +196,7 @@
     
         "Competence":{
       
-            "header":"PRODUCTS",
+            "header":"Portfolio",
             "DMC_H":"SAP DMC",
             "DMC_C":"SAP DMC, or Data Management Console, is a vital SAP component for streamlined data governance. It centralizes data quality monitoring, integration, and lifecycle management, enhancing consistency and informed decision-making. This tool empowers businesses to optimize data assets, ensuring integrity and compliance while driving operational efficiency.",
             "ME_H":"SAP ME",

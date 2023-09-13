@@ -30,6 +30,7 @@
 
 
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,7 +46,7 @@ body {
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family:  sans-serif;
   direction:rtl;
 }
 
@@ -62,5 +63,33 @@ body {
 .cta {
   background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) fixed center center;
 }
+
+
+
+
+.text-custom-color {
+  color: #61C435;
+ 
+}
+
+.text-custom-color2 {
+  color: #203749;
+ 
+}
+
+
+
+
+.bg-custom-bg-color {
+  background-color: #203749;
+  
+}
+.bg-custom-bg-color2 {
+  background-color: #61C435;
+  
+}
+
+
+
 
 

@@ -61,41 +61,41 @@ const NavLinks = () => {
             <div style={navigationContainerStyle} >
 
             
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/yaniv">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  smooth to="/yaniv">
                 {t("header.About")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/Services">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  smooth to="/Services">
                 {t("header.Services")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" smooth to="/Competence">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  smooth to="/Competence">
                 {t("header.Competence")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/roman">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"   to="/roman">
                 {t("header.Partners")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/clients2">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/clients2">
                 {t("header.Costumers")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/contact">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/contact">
                 {t("header.Contact")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" to="/careers">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500"  to="/careers">
                 {t("header.Careers")}
             </HashLink>
             </div>
 
 
-{/*     "header" :{
-        "message":"Abot Grovv",
-         "About":"על החברה",
-         "Services":"שירותים",
-         "Competence":"תיק עבודות",
-         "Partners": "שותפים",
-         "Costumers":"Costumers",
-         "Contact": "Contact Us",
-         "Careers": "Careers"
-    },
- */}
+            
+
+
+     
+
+
+
+
+
+
+
 
 <div className={`switch ${isRTL ? 'rtl' : 'ltr'}`}>
         <input
