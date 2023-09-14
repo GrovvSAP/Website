@@ -66,25 +66,25 @@ const NavLinks = () => {
 
      
       
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/yaniv">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/yaniv">
                 {t("header.About")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/Services">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/Services">
                 {t("header.Services")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/Competence">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} smooth to="/Competence">
                 {t("header.Competence")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }}  to="/roman">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }}  to="/roman">
                 {t("header.Partners")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/clients2">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/clients2">
                 {t("header.Costumers")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/contact">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/contact">
                 {t("header.Contact")}
             </HashLink>
-            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/careers">
+            <HashLink className="px-4 font-extrabold text-gray-500 hover:text-green-500 yaniv" style={{ fontSize: isRTL ? '1.2rem' : '1rem' }} to="/careers">
                 {t("header.Careers")}
             </HashLink>
             </div>

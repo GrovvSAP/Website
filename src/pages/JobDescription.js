@@ -68,9 +68,9 @@ const Contact = () => {
 		<NavBar/>
 	</div>
 	<div className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24 bg-gray-200">
-		<div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
-			<div className="flex space-x-12">
-				<div className="w-7/12">
+        <div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-x-12">
+            <div className="w-full md:w-7/12">
 					<h3 className="text-custom-color2 font-bold text-lg mt-6 mb-2"> {t("JobDescription.Responsibilities")}</h3>
 					<ul className="list-disc ml-8">
 						<li>{t("JobDescription.bullet1")}</li>
@@ -93,8 +93,8 @@ const Contact = () => {
 						<li>{t("JobDescription.bullet_9")}</li>
 					</ul>
 				</div>
-				<form onSubmit={sendEmail} className="w-6/12 ml-4">
-					<div className="w-full bg-white p-8 my-4 md:px-12 rounded-2xl shadow-2xl">
+				<form onSubmit={sendEmail} className="w-full md:w-5/12 ml-0 md:ml-4">
+              <div className="w-full bg-white p-4 md:p-8 my-4 md:px-12 rounded-2xl shadow-2xl">
 						<h1 className="font-bold text-center text-custom-color2 lowerrcase text-4xl">{t("JobDescription.Form_header")} </h1>
 						<div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
 							<div>

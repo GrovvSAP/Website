@@ -1,16 +1,52 @@
-/* NavBarStyle.css */
-
 /* Default size for larger screens */
 .logo {
-    width: 40%; /* Adjust the width as needed */
+  width: 40%; /* Adjust the width as needed */
+  height: auto;
+}
+
+/* Smaller size for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  /* Adjust the logo size for smaller screens */
+  /* .logo {
+    width: 100%; 
     height: auto;
+  } */
+
+  .logo {
+    width: 5rem;
+    height: 4rem;
   }
-  
-  /* Smaller size for screens with a maximum width of 768px */
-  @media screen and (max-width: 768px) {
-    .logo {
-      width: 100%; /* Adjust the width for smaller screens */
-      height: auto;
-    }
+
+  /* Increase the hamburger icon size */
+  button {
+    font-size: 24px; /* Adjust the font-size as needed for a bigger icon */
   }
-  
+
+  /* Additional styles for smaller screens can go here */
+  .yaniv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 12px;
+  }
+  .yaniv2 {
+    display: none;
+  }
+
+  /* Increase the height of the navigation bar */
+  nav {
+    height: 80px; /* Adjust the height as needed */
+  }
+
+  /* Increase the height of the hamburger menu button */
+  button {
+    height: 40px; /* Adjust the height as needed */
+  }
+
+  /* Increase the height of the menu that appears when the hamburger icon is clicked */
+  .fixed.transition-transform {
+    height: calc(100vh - 80px); /* Adjust the height as needed */
+  }
+}
