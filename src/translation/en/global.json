@@ -94,16 +94,16 @@
         },
 
         "Pagefooter":{
-            "header":"We",
-            "header2":"Build",
+            "header":"We Build",
+        
 
             "paragraph":"With over 10 years experience in software analysis and design and a deep understanding of the latest IT trends and solutions, we provide customized recommendations and strategies to help you improve your operations, reduce costs, and increase efficiency."
           
         
         },
         "Pagefooter_homepage":{
-            "header":"We",
-            "header2":"Provide Solutions",
+            "header":"We Provide Solutions",
+            
 
             "paragraph":"Leveraging years of experience in SAP technologies, we specialize in crafting tailored solutions that harness the power of SAP's suite of enterprise software. From intricate implementations to seamless integrations, we optimize your business processes and drive growth with SAP at the core.",
             "buttom":"See all Servies"

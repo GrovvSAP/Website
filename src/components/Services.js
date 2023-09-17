@@ -100,7 +100,7 @@ const Services = () => {
 						</svg>
 					</div>
 					<h3 className={`text-3xl text-custom-color2 font-bold ${isRTL ?'text-left' :'lg:text-right' }`}>{t("Services.Pagefooter.header")}
-					<span className='font-black'>{t("Services.Pagefooter.header2")}</span>
+				
 				</h3>
 				<div>
 					<p className={`my-3 text-xl text-gray-600 font-semibold ${isRTL ?'text-left' :'lg:text-right' }`}> {t("Services.Pagefooter.paragraph")}
@@ -131,7 +131,7 @@ const Services = () => {
 				</svg>
 			</div>
 			<h3 className={`text-3xl text-custom-color2 font-bold ${isRTL ?'text-left' :'lg:text-right' }`}> {t("Services.Pagefooter_homepage.header")}
-			<span className='font-black'>{t("Services.Pagefooter_homepage.header2")}</span>
+			
 		</h3>
 		<div>
 			<p className={`my-3 text-xl text-gray-600 font-semibold ${isRTL ?'text-left' :'lg:text-right' }`}> {t("Services.Pagefooter_homepage.paragraph")}
