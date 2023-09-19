@@ -42,7 +42,9 @@ const NavLinks = () => {
 
   // Toggle language and content direction
   const handleToggle = () => {
-    setIsRTL(prevIsRTL => !prevIsRTL);
+
+      setIsRTL(prevIsRTL => !prevIsRTL);
+    
   };
 
   const navigationContainerStyle = {
