@@ -4,12 +4,24 @@ import img from '../images/web.svg';
 import img2 from '../images/app.svg';
 import img3 from '../images/hosting.svg';
 import img4 from '../images/consultation.svg';
+import img5 from '../images/dude.svg';
+import img6 from '../images/dude2.svg';
+
+
+
+import img20 from '../images/dude20.svg';
+import img30 from '../images/dude30.svg';
+import img40 from '../images/dude40.svg';
+import img50 from '../images/dude50.svg';
+import img60 from '../images/dude60.svg';
+import img70 from '../images/dude70.svg';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import './img.css';
 
 
 const Services = () => {
@@ -43,38 +55,43 @@ const Services = () => {
 			</div>
 			<h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-custom-color2">{t("Services.PageHeader.paragraph")}</h2>
 		</div>
+
+
+
 		<div className="px-12" data-aos="fade-down" data-aos-delay="600">
 			<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
 					<div className="m-2 text-justify text-sm">
-						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img}/>
+						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out img-size" src={img6}  style={{ marginBottom: '70px' }}/>
 						<h2 className="font-semibold my-4 text-2xl text-center"> {t("Services.Specification.Specification_header")}</h2>
 						<p className="text-md font-medium">
                                 {t("hero.header")}
                                 </p>
 					</div>
 				</div>
+				<div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+    <div className="m-2 text-justify text-sm">
+        <img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out img-size" src={img5} style={{ marginBottom: '50px' }} /> {/* Adjust the margin-bottom */}
+        <h2 className="font-semibold my-4 text-2xl text-center">{t("Services.ProcessAnalysess.ProcessAnalysess_header")}</h2>
+        <p className="text-md font-medium">
+            {t("Services.ProcessAnalysess.ProcessAnalysess_paragraph")}
+        </p>
+    </div>
+</div>
+
+		
 				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
 					<div className="m-2 text-justify text-sm">
-						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2}/>
-						<h2 className="font-semibold my-4 text-2xl text-center">{t("Services.ProcessAnalysess.ProcessAnalysess_header")}</h2>
-						<p className="text-md font-medium">
-                                {t("Services.ProcessAnalysess.ProcessAnalysess_paragraph")}
-                                </p>
-					</div>
-				</div>
-				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
-					<div className="m-2 text-justify text-sm">
-						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3}/>
+						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out img-size" src={img50}/>
 						<h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.SystemImplementaion.SystemImplementaion_header")}</h2>
 						<p className="text-md font-medium">
-                                {t("Services.SystemImplementaion.SystemImplementaion_paragraph")}
+						{t("Services.SystemImplementaion.SystemImplementaion_paragraph")}
                                 </p>
 					</div>
 				</div>
 				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
 					<div className="m-2 text-justify text-sm">
-						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4}/>
+						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out img-size" src={img60}/>
 						<h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.User&AcceptanceTests.User&AcceptanceTests_header")}</h2>
 						<p className="text-md font-medium">
                                 {t("Services.User&AcceptanceTests.User&AcceptanceTests_paragraph")}
@@ -119,7 +136,7 @@ const Services = () => {
 				</div>
 				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
 					<div className="m-2 text-justify text-sm">
-						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4}/>
+						<img alt="card img" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img70}/>
 						<h2 className="font-semibold my-4 text-2xl text-center ">{t("Services.UI/UX_userexperience.UI/UX_userexperience_header")}</h2>
 						<p className="text-md font-medium">
                                 {t("Services.UI/UX_userexperience.UI/UX_userexperience_paragraph")}
@@ -140,7 +157,7 @@ const Services = () => {
 						</svg>
 					</div>
 					<h3 className={`text-3xl text-custom-color2 font-bold ${isRTL ?'text-left' :'lg:text-right' }`}> {t("Services.Pagefooter_homepage.header")}
-					<span className='font-black'>{t("Services.Pagefooter_homepage.header2")}</span>
+					
 				</h3>
 				<div>
 					<p className={`my-3 text-xl text-gray-600 font-semibold ${isRTL ?'text-left' :'lg:text-right' }`}> {t("Services.Pagefooter_homepage.paragraph")}
