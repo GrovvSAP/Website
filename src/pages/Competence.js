@@ -118,22 +118,8 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-custom-color2 hover:scale-105 rounded-lg shadow-2xl p-3">
-					<div className="m-2 text-justify text-sm">
-						<h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">  {t("Competence.CustomComplexDevelopments_H")}</h4>
-						<p className="text-md font-medium leading-5 h-auto md:h-48">
-                                {t("Competence.CustomComplexDevelopments_C")}
-                                </p>
-						<div className="flex justify-center my-4">
-							<a href="https://www.systema.com/portfolio/sap-manufacturing/sap-me" target="_blank" rel="noopener noreferrer" className="text-white bg-custom-bg-color2 hover:bg-green-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-        {t("Competence.Butoom")}
-        {/* <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-									<path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
-								</svg> */}
-      </a>
-						</div>
-					</div>
-				</div>
+				
+      
 				<div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-custom-color2 hover:scale-105 rounded-lg shadow-2xl p-3">
 					<div className="m-2 text-justify text-sm">
 						<h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">{t("Competence.PCO_H")}</h4>

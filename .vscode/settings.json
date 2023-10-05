@@ -1,0 +1,5 @@
+{
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+  "appService.defaultWebAppToDeploy": "/subscriptions/a0df6a39-b135-4a4d-9ca8-e1bc6b051ac5/resourceGroups/grovv/providers/Microsoft.Web/sites/Grovv",
+  "appService.deploySubpath": "."
+}
