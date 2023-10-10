@@ -135,6 +135,22 @@ const Contact = () => {
       });
   };
 
+  
+  const constructMailtoLink = () => {
+    const subject = encodeURIComponent('Uploading a resume');
+    const body = encodeURIComponent(
+      `First Name: ${firstName}\n` +
+      `Last Name: ${lastName}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n` +
+      `City: ${city}\n` +
+      `LinkedIn: ${linkdin}\n` +
+      `Message: ${message}\n\n`+
+      "Please upload your CV"
+    );
+    
+    return `mailto:yanividov12@gmail.com?subject=${subject}&body=${body}`;
+  };
   return (
     <>
       <div>
@@ -206,21 +222,11 @@ const Contact = () => {
                     <p className="text-red-500 text-sm">{errors.message}</p>
                   }
                 </div>
-                <div className="file-input-container">
-                  <label htmlFor="avatar">{t("JobDescription.FileLabel")}</label>
-                  <input
-                    type="file"
-                    id="avatar"
-                    name="avatar"
-                    accept=".png, .jpeg, .jpg, .pdf, .doc, .docx"
-                    style={{ width: '100px' }}
-                    onChange={handleFileChange}
-                  />
-                </div>
+             
                 <div className="my-8 w-full lg:w-6/7 ml-auto">
-                  <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-custom-bg-color2 hover:bg-green-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                  <a href={constructMailtoLink()} className="uppercase text-sm font-bold tracking-wide bg-custom-bg-color2 hover:bg-green-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                     {t("JobDescription.SubmitButtom")}
-                  </button>
+                  </a>
                 </div>
               </div>
             </form>

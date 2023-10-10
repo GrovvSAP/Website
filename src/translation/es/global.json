@@ -8,8 +8,8 @@
          "Competence":"תיק עבודות",
          "Partners": "שותפים",
          "Costumers":"לקוחות",
-         "Contact": "צרו ",
-         "Careers": "  בגרוב"
+         "Contact": "צרו קשר ",
+         "Careers": "  קריירה בגרוב"
     },
 
     "hero":{
@@ -257,7 +257,7 @@
         "Summery":"ספר לנו על עצמך",
         "FileLabel":"העלת קורות חיים",
         "FileButtom":"בחר קובץ",
-        "SubmitButtom":"הגש"
+        "SubmitButtom":"העלאת קובץ ושליחת מייל "
 
 
     }
