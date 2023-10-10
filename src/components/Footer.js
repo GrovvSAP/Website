@@ -65,25 +65,25 @@ const Footer = () => {
                         <h6 className="text-[#203749] text-xl font-bold mb-4">{t("Footer.SecondSection.header")}</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.About")} </HashLink>
+                            <HashLink to="/yaniv" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.About")} </HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Services")}</HashLink>
+                            <HashLink to="/Services" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Services")}</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Competence")}</HashLink>
+                            <HashLink to="/Competence" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Competence")}</HashLink>
                         </li>     
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Partners")}</HashLink>
+                            <HashLink to="/roman" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Partners")}</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Costumers")}</HashLink>
+                            <HashLink to="/clients2" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Costumers")}</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Contact Us")}</HashLink>
+                            <HashLink to="/contact" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Contact Us")}</HashLink>
                         </li>   
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Careers")}</HashLink>
+                            <HashLink to="/careers" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.SecondSection.Careers")}</HashLink>
                         </li> 
                                        
                         </ul>
@@ -96,34 +96,34 @@ const Footer = () => {
                         <h6 className=" text-custom-color2 text-[#203749] text-xl font-bold mb-4">{t("Footer.ThirdSection.header")}</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <Link to="" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.Specification")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.Specification")}</p>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.ProcessAnalysess")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.ProcessAnalysess")}</p>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.SystemImplementation")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.SystemImplementation")}</p>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.User&AcceptanceTests")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.User&AcceptanceTests")}</p>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.SystemIntegration")}</Link>
-                        </li>
-
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.CustomTailorMadeDevelopments")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.SystemIntegration")}</p>
                         </li>
 
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.DataMigration")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.CustomTailorMadeDevelopments")}</p>
                         </li>
 
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.ProjectManagement")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.DataMigration")}</p>
+                        </li>
+
+                        <li className="mb-2">
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.ProjectManagement")}</p>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#203749] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">{t("Footer.ThirdSection.UI/UXuserExperience")}</Link>
+                            <p className="text-[#203749] hover:text-gray-900 ">{t("Footer.ThirdSection.UI/UXuserExperience")}</p>
                         </li>
 
                         </ul>
