@@ -18,6 +18,7 @@ import Competence from './pages/Competence';
 import AboutGrovv from './pages/AboutGrovv';
 import Roman from './pages/Roman';
 import JobDescription from './pages/JobDescription';
+import JobDescription2 from './pages/JobDescription2';
 import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import Services from './pages/Services';
@@ -58,7 +59,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/roman" element={<Roman />} /> 
 
-            <Route path="/jobPosition" element={<JobDescription />} /> 
+            <Route path="/jobPosition" element={<JobDescription />} />
+            <Route path="/jobPosition2" element={<JobDescription2 />} /> 
             <Route path="/yaniv" element={<AboutGrovv />} /> 
 
           </Routes>

@@ -27,7 +27,10 @@ const Contact = () => {
     const [isLoading, setIsLoading] = useState(true);
     const isRTL = i18n.language === 'en';
   
-    useDocTitle('MLD | Molad e Konsult - Send us a message');
+   
+    
+
+    
   
     useEffect(() => {
       setIsLoading(false);

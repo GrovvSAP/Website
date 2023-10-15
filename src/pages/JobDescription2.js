@@ -137,7 +137,7 @@ const Contact = () => {
 
   
   const constructMailtoLink = () => {
-    const subject = encodeURIComponent(`CV- ${firstName}`+` `+`${lastName}`+`,`+` `+`SQL Developer` );
+    const subject = encodeURIComponent(`CV- ${firstName}`+` `+`${lastName}`+`,`+` `+`Project Manager` );
     const body = encodeURIComponent(
       `First Name: ${firstName}\n` +
       `Last Name: ${lastName}\n` +
@@ -160,7 +160,9 @@ const Contact = () => {
         <div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
           <div className="flex flex-col md:flex-row space-y-4 md:space-x-12">
             <div className="w-full md:w-7/12">
-            <h1><b><u style={{ fontSize: '24px', textDecoration: 'underline' }}>SQL Developer</u></b></h1>
+           <h1><b><u style={{ fontSize: '24px', textDecoration: 'underline' }}>Project manager</u></b></h1>
+
+
               <h3 className="text-custom-color2 font-bold text-lg mt-6 mb-2"> {t("JobDescription.Responsibilities")}</h3>
               <ul className="list-disc ml-8">
                 <li>{t("JobDescription.bullet1")}</li>
@@ -185,6 +187,7 @@ const Contact = () => {
             </div>
             <form onSubmit={sendEmailAndSaveFile} className="w-full md:w-5/12 ml-0 md:ml-4">
               <div className="w-full bg-white p-4 md:p-8 my-4 md:px-12 rounded-2xl shadow-2xl">
+                
                 <h1 className="font-bold text-center text-custom-color2 lowerrcase text-4xl">{t("JobDescription.Form_header")} </h1>
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                   <div>
@@ -219,6 +222,7 @@ const Contact = () => {
                   }
                 </div>
                 <div className="my-4">
+                    
                   <textarea name="message" placeholder={t("JobDescription.Summery")} className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" value={message} onChange={(e) => setMessage(e.target.value)} onKeyUp={clearErrors} /> {errors &&
                     <p className="text-red-500 text-sm">{errors.message}</p>
                   }

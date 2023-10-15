@@ -19,7 +19,7 @@ import img6 from '../images/sap.png';
 
 
 const Contact = () => {
-    useDocTitle('MLD | Molad e Konsult - Send us a message')
+    // useDocTitle('MLD | Molad e Konsult - Send us a message')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')

@@ -15,7 +15,7 @@ const Contact = () => {
   const initialIsRTL = initialLanguage === 'he';
   const [isRTL, setIsRTL] = useState(initialIsRTL);
 
-  useDocTitle('MLD | Molad e Konsult - Send us a message');
+//   useDocTitle('MLD | Molad e Konsult - Send us a message');
 
   useEffect(() => {
     const lang = isRTL ? 'he' : 'en';
@@ -100,7 +100,7 @@ const Contact = () => {
                 <i className="fas fa-cogs text-3xl text-green-500 mb-3"></i>
                 <h3 className="text-custom-color2 ext-lg font-semibold mb-2 text-xl">{t("Careers.RightCardHeader")}</h3>
                 <p className="text-gray-700 text-center max-w-xs text-lg">{t("Careers.RightCardContent")}</p>
-                <a href="/jobPosition" className="mt-4 bg-custom-bg-color2 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300 text-base">{t("Careers.buttomLeft")}</a>
+                <a href="/jobPosition2" className="mt-4 bg-custom-bg-color2 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300 text-base">{t("Careers.buttomLeft")}</a>
             </div>
         </div>
     </div>
